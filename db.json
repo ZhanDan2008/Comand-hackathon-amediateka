@@ -1,0 +1,58 @@
+{
+  "moovies":[
+    {
+      "image":"",
+      "title":"...",
+      "description":"...",
+      "trailer":"...",
+      "plot":"...",
+      "genre":["...","..."],
+      "country":"...",
+      "actors":["...","..."],
+      "directors":["...","..."],
+      "year":"...",
+      "rating":"...",
+      "assessments":{
+        "amediateka":"...",
+        "kinopoisk":"...",
+        "IMGb":"..."
+      }
+  },
+  {
+    "image":"...",
+    "title":"...",
+    "description":"...",
+    "trailer":"...",
+    "plot":"...",
+    "genre":["...","..."],
+    "country":"...",
+    "actors":["...","..."],
+    "directors":["...","..."],
+    "year":"...",
+    "rating":"...",
+    "assessments":{
+      "amediateka":"...",
+      "kinopoisk":"...",
+      "IMGb":"..."
+    }
+},
+{
+  "image":"...",
+  "title":"...",
+  "description":"...",
+  "trailer":"...",
+  "plot":"...",
+  "genre":["...","..."],
+  "country":"...",
+  "actors":["...","..."],
+  "directors":["...","..."],
+  "year":"...",
+  "rating":"...",
+  "assessments":{
+    "amediateka":"...",
+    "kinopoisk":"...",
+    "IMGb":"..."
+  }
+}
+]
+}
