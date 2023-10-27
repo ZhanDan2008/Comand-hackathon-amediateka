@@ -161,12 +161,25 @@ p {
 }
 
 
-.main_moovie_modalka {
-
+.addFilmModal {
+  width: 30em;
+  height: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #88888872;
+  border-radius: 8px;
+  padding: 1em 3em;
+  margin: 3em;
 }
-.main_moovie_modalka_content{
 
+#addFilmForm input {
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 0.2em;
+  margin: 0.3em 0;
+  height: 2em;
+  width: auto;
 }
-.main_moovie_modalka_form{
 
-}
