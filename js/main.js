@@ -1,7 +1,7 @@
 //? connections
 const addFilmBtn = document.querySelector("#add_film_btn");
 const addFilmModal = document.querySelector(".addFilmModal");
-
+const watch_now_container = document.getElementById("watch_now")
 //? modal logic
 
 // ?MAIN_VARIABLES
@@ -27,7 +27,6 @@ const login_username_value = document.querySelector("#username_login_id");
 const login_password_value = document.querySelector("#password_login_id");
 const admin_panel_btn = document.querySelector("#admin_panel");
 // *FUNCTIONS
-console.log(login_password_value);
 function show_login_logout_register_buttons() {
   if (login_user_or_not()) {
     if (localStorage.getItem("username") === "admin@gmail.com") {
@@ -45,7 +44,7 @@ function show_login_logout_register_buttons() {
   login_btn.style.display = "block";
 }
 show_login_logout_register_buttons();
-async function get_all_users(what = "c") {
+async function get_all_users_or_moovies(what = undefined) {
   if (what == "users") {
     let a = await fetch(USERS_API);
     let b = await a.json();
@@ -65,7 +64,7 @@ function save_username_in_localstorage(username) {
   show_login_logout_register_buttons();
 }
 async function get_one_user(username) {
-  let all_users = await get_all_users("users");
+  let all_users = await get_all_users_or_moovies("users");
   return all_users.find((item) => item.username === username);
 }
 function login_user_or_not() {
@@ -73,7 +72,7 @@ function login_user_or_not() {
     return false;
   }
   return true;
-}
+} 
 async function registerUser(e) {
   e.preventDefault();
   if (
@@ -99,15 +98,16 @@ async function registerUser(e) {
     place_for_errors.style.color = "green";
     place_for_errors.innerText = "С возвращеием Админ!";
     setTimeout(() => {
-      place_for_errors.innerText = "";
+      
       registration_modal.style.display = "none";
+      place_for_errors.innerText = "";
+      place_for_errors.style.color = "red"
     }, 1000);
     save_username_in_localstorage(username_value.value);
     username_value.value = "";
     age_value.value = "";
     password_value.value = "";
     password_conf_value.value = "";
-
     return;
   }
   if (
@@ -149,7 +149,6 @@ async function registerUser(e) {
     place_for_errors.innerText = "";
     registration_modal.style.display = "none";
   }, 1000);
-  place_for_errors.innerText = "";
   save_username_in_localstorage(username_value.value);
   username_value.value = "";
   age_value.value = "";
@@ -174,7 +173,7 @@ logout_btn.addEventListener("click", logout_function);
 
 // *FUNCTIONS
 async function login_function() {
-  let all_users = await get_all_users("users");
+  let all_users = await get_all_users_or_moovies("users");
   let a = all_users.filter(
     (item) =>
       item.username === login_username_value.value &&
@@ -195,6 +194,18 @@ login_btn.addEventListener("click", () => {
 });
 login_btn_finish.addEventListener("click", login_function);
 
-!ADM;
+async function render(){
+  let all_moovies = await get_all_users_or_moovies()
+  all_moovies.forEach(item => {
+    watch_now_container.innerHTML += `
+    <div class="watch_now_img film_img">
+              <img
+                src=
+                alt=""
+              />
+              <p>Игра престолов</p>
+            </div>
+    `
+  })
 
-//! create
+}

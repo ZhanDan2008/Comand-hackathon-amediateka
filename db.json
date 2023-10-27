@@ -1,89 +1,5 @@
 {
   "moovies": [
-    {
-      "id": "...",
-      "image": "",
-      "title": "...",
-      "description": "...",
-      "trailer": "...",
-      "plot": "...",
-      "genre": [
-        "...",
-        "..."
-      ],
-      "country": "...",
-      "actors": [
-        "...",
-        "..."
-      ],
-      "directors": [
-        "...",
-        "..."
-      ],
-      "year": "...",
-      "rating": "...",
-      "assessments": {
-        "amediateka": "...",
-        "kinopoisk": "...",
-        "IMGb": "..."
-      }
-    },
-    {
-      "id": "...",
-      "image": "...",
-      "title": "...",
-      "description": "...",
-      "trailer": "...",
-      "plot": "...",
-      "genre": [
-        "...",
-        "..."
-      ],
-      "country": "...",
-      "actors": [
-        "...",
-        "..."
-      ],
-      "directors": [
-        "...",
-        "..."
-      ],
-      "year": "...",
-      "rating": "...",
-      "assessments": {
-        "amediateka": "...",
-        "kinopoisk": "...",
-        "IMGb": "..."
-      }
-    },
-    {
-      "id": "...",
-      "image": "...",
-      "title": "...",
-      "description": "...",
-      "trailer": "...",
-      "plot": "...",
-      "genre": [
-        "...",
-        "..."
-      ],
-      "country": "...",
-      "actors": [
-        "...",
-        "..."
-      ],
-      "directors": [
-        "...",
-        "..."
-      ],
-      "year": "...",
-      "rating": "...",
-      "assessments": {
-        "amediateka": "...",
-        "kinopoisk": "...",
-        "IMGb": "..."
-      }
-    }
   ],
   "users": [
     {
@@ -200,6 +116,44 @@
       "password": "chocolate",
       "admin": true,
       "id": 18
+    },
+    {
+      "username": "Maksat",
+      "age": "15",
+      "password": "123123",
+      "id": 19
+    },
+    {
+      "username": "danielflsdmflps",
+      "age": "423940",
+      "password": "asdfgh",
+      "id": 20
+    },
+    {
+      "username": "danielcldsmvc",
+      "age": "312",
+      "password": "123123",
+      "id": 21
+    },
+    {
+      "username": "danwlpc",
+      "age": "231",
+      "password": "plot",
+      "id": 22
+    },
+    {
+      "username": "admin@gmail.com",
+      "age": "",
+      "password": "chocolate",
+      "admin": true,
+      "id": 23
+    },
+    {
+      "username": "admin@gmail.com",
+      "age": "",
+      "password": "chocolate",
+      "admin": true,
+      "id": 24
     }
   ]
 }

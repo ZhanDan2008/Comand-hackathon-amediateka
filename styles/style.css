@@ -1,6 +1,10 @@
 * {
   padding: 0;
 }
+
+body{
+    position: relative;
+}
 .container1 {
   width: 100%;
   position: relative;
@@ -62,7 +66,7 @@
   position: absolute;
   z-index: 15;
   left: 50%;
-  top: 50%;
+  top: 20%;
   transform: translate(-50%, -50%);
   width: 30%;
   height: 400px;
@@ -156,31 +160,13 @@ p {
   border-radius: 0.5em;
 }
 
-.addFilmModal {
-  display: block;
-  width: 30em;
-  height: 20em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #88888872;
-  border-radius: 8px;
-  padding: 1em 3em;
-  margin: 3em;
-}
 
-#addFilmForm input {
-  border: none;
-  border-radius: 8px;
-  padding: 0.5em 0.2em;
-  margin: 0.3em 0;
-  height: 2em;
-}
+.main_moovie_modalka {
 
-.test {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
+}
+.main_moovie_modalka_content{
+
+}
+.main_moovie_modalka_form{
+
 }

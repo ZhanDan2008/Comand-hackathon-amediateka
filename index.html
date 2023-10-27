@@ -128,36 +128,32 @@
           </button>
         </div>
       </div>
-      <div class="test">
-        <div class="addFilmModal">
+      <!-- !MOOVIE MODALKA -->
+      <div class="main_moovie_modalka">
+        <div class="main_moovie_modalka_content">
           <h2>Add Film</h2>
-          <form id="addFilmForm">
+          <form id="main_moovie_modalka_form">
             <input type="url" id="addFilmUrl" placeholder="add link" />
             <input type="text" id="addFilmTitle" placeholder="title" />
-            <input type="text" id="addFilmDescription" placeholder="title" />
+            <input type="text" id="addFilmDescription" placeholder="description" />
             <input type="url" id="addFilmTrailer" placeholder="trailer url" />
-            <input type="text" id="addFilmPlot" placeholder="plot" />
+            <input type="text" id="addFilmPlot" pla ceholder="plot" />
             <input type="text" id="addFilmGenre" placeholder="genre" />
             <input type="text" id="addFilmCountry" placeholder="country" />
             <input type="text" id="addFilmActors" placeholder="actors" />
             <input type="text" id="addFilmDirectors" placeholder="directors" />
             <input type="text" id="addFilmYear" placeholder="year" />
             <input type="text" id="addFilmRaiting" placeholder="raiting" />
-            <input
-              type="text"
-              id="addFilmAssessments"
-              placeholder="assessments"
-            />
-            <a id="add_film_btn" href="#">
-              <button class="add_film_btn">Add Film</button>
-            </a>
+            <input type="text" id="addFilmAssessments" placeholder="assessments"/>
+            <p class="errors" id></p>
+            <button class="btn btn-warning">Add film</button>
           </form>
         </div>
       </div>
-
+      <!-- !MOOVIE MODALKA END -->
       <div class="watch_now">
         <p>Смотрят сейчас</p>
-        <div class="watch_now_container film_preview">
+        <div id='watch_now' class="watch_now_container film_preview">
           <div class="watch_now_img film_img">
             <img
               src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/600x900"
