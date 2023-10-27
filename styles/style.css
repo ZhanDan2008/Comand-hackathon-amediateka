@@ -3,8 +3,37 @@
     display: flex;
     flex-direction: column;
 } */
-.first_page{
-    width: 100%;
-    height: 100px;
-    background-image: url("../images/first_page.png");
+.container {
+  background-color: black;
+}
+.first_page {
+  width: 100%;
+  height: 100px;
+  background-image: url("../images/first_page.png");
+}
+
+.film_preview {
+  max-width: 100%;
+  height: auto;
+  padding: 1em 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+p {
+  color: white;
+}
+
+.film_img {
+  margin: 0.5em 0.5em;
+}
+
+.film_img img {
+  width: 12em;
+  height: 8em;
+  padding: 0;
+  object-fit: cover;
+  border-radius: 0.5em;
 }
