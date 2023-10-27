@@ -1,83 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
-
-<div class="container1">
-    <div class="registration_modal">
-      <h2>Registration</h2>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container1">
+      <div class="registration_modal">
+        <h2>Registration</h2>
         <div class="content_of_registration_modal">
-            <input   id="username_id"   type="text" placeholder="username...">
-            <input   id="age_id"   type="number" placeholder="age...">
-            <input   id="password_id"   type="password" placeholder="password...">
-            <input   id="password_conf_id"   type="password" placeholder="check_password...">
-            <p id="errors_in_register" class="errors"></p>
-            <button  id="finish_registration_btn"  class="btn btn-warning">Register</button>
-        </div>  
-    </div>
-    <div id="login_modal"  class="registration_modal">
+          <input id="username_id" type="text" placeholder="username..." />
+          <input id="age_id" type="number" placeholder="age..." />
+          <input id="password_id" type="password" placeholder="password..." />
+          <input
+            id="password_conf_id"
+            type="password"
+            placeholder="check_password..."
+          />
+          <p id="errors_in_register" class="errors"></p>
+          <button id="finish_registration_btn" class="btn btn-warning">
+            Register
+          </button>
+        </div>
+      </div>
+      <div id="login_modal" class="registration_modal">
         <h2>Login</h2>
         <div class="content_of_registration_modal">
-            <input   id="username_login_id"   type="text" placeholder="username...">
-            <input   id="password_login_id"   type="password" placeholder="password...">
-            <p id="errors_in_login" class="errors"></p>  
-            <button  id="finish_login_btn"  class="btn btn-warning">Login</button>
-        </div>  
-    </div>
-<div class="navbar">
-    <ul class="left_part_of_navbar">
-        <li style="background-color: black;"><img src="./images/logo.svg"></li>
-        <li>Сериалы</li>
-        <li>Фильмы</li>
-        <li>Коллекции</li>
-        <li>Кино1TB</li>
-        <li>Эфир</li>
-        <li><input type="text" placeholder="Поиск..."></li>
-    </ul>
-    <ul class="right_part_of_navbar">
-        <li><button type="button" id="login_id"  class="btn btn-warning">Login</button></li>
-        <li><button type="button" id="admin_panel" class="btn btn-warning">Panel</button></li>
-        <div class="logout_and_register_div">
-        <li><button id="logout_id"  type="button" class="btn">Logout</button></li>
-        <li><button id="register_id"  type="button" class="btn">Register</button></li>
-    </div>
-    </ul>
-</div>
-<div class="main_page">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://i.amediateka.tech/resize/1920x960/_stor_/cms/showcases-bannerasset/0/dc/0f991f7b56eda55c7a55b9529352f0dc-1478-0167f61c7a5946bc8161cfe294689e75.jpg" class="d-block w-100" alt="...">
+          <input id="username_login_id" type="text" placeholder="username..." />
+          <input
+            id="password_login_id"
+            type="password"
+            placeholder="password..."
+          />
+          <p id="errors_in_login" class="errors"></p>
+          <button id="finish_login_btn" class="btn btn-warning">Login</button>
+        </div>
+      </div>
+      <div class="navbar">
+        <ul class="left_part_of_navbar">
+          <li style="background-color: black">
+            <img src="./images/logo.svg" />
+          </li>
+          <li>Сериалы</li>
+          <li>Фильмы</li>
+          <li>Коллекции</li>
+          <li>Кино1TB</li>
+          <li>Эфир</li>
+          <li><input type="text" placeholder="Поиск..." /></li>
+        </ul>
+        <ul class="right_part_of_navbar">
+          <li>
+            <button type="button" id="login_id" class="btn btn-warning">
+              Login
+            </button>
+          </li>
+          <li>
+            <button type="button" id="admin_panel" class="btn btn-warning">
+              Panel
+            </button>
+          </li>
+          <div class="logout_and_register_div">
+            <li>
+              <button id="logout_id" type="button" class="btn">Logout</button>
+            </li>
+            <li>
+              <button id="register_id" type="button" class="btn">
+                Register
+              </button>
+            </li>
           </div>
-          <div class="carousel-item">
-            <img src="https://i.amediateka.tech/resize/1920x960/_stor_/cms/showcases-bannerasset/7/9c/97b4e80c24605dca97b0fa037e71479c-2086-792f3b131cf24257ab513a1b6570d2b6.jpg" class="d-block w-100" alt="...">
+        </ul>
+      </div>
+      <div class="main_page">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://i.amediateka.tech/resize/1920x960/_stor_/cms/showcases-bannerasset/0/dc/0f991f7b56eda55c7a55b9529352f0dc-1478-0167f61c7a5946bc8161cfe294689e75.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://i.amediateka.tech/resize/1920x960/_stor_/cms/showcases-bannerasset/7/9c/97b4e80c24605dca97b0fa037e71479c-2086-792f3b131cf24257ab513a1b6570d2b6.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://i.amediateka.tech/resize/1920x960/_stor_/cms/showcases-bannerasset/c/04/10533d0a8baaaa0cbf467965f2605c04-2056-5c131bdcb9f04e6bb30309a7bf470da5.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="https://i.amediateka.tech/resize/1920x960/_stor_/cms/showcases-bannerasset/c/04/10533d0a8baaaa0cbf467965f2605c04-2056-5c131bdcb9f04e6bb30309a7bf470da5.jpg" class="d-block w-100" alt="...">
+          <button
+            class="carousel-control-prev arrow_button"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next arrow_button"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="test">
+        <div class="addFilmModal">
+          <h2>Add Film</h2>
+          <form id="addFilmForm">
+            <input type="url" id="addFilmUrl" placeholder="add link" />
+            <input type="text" id="addFilmTitle" placeholder="title" />
+            <input type="text" id="addFilmDescription" placeholder="title" />
+            <input type="url" id="addFilmTrailer" placeholder="trailer url" />
+            <input type="text" id="addFilmPlot" placeholder="plot" />
+            <input type="text" id="addFilmGenre" placeholder="genre" />
+            <input type="text" id="addFilmCountry" placeholder="country" />
+            <input type="text" id="addFilmActors" placeholder="actors" />
+            <input type="text" id="addFilmDirectors" placeholder="directors" />
+            <input type="text" id="addFilmYear" placeholder="year" />
+            <input type="text" id="addFilmRaiting" placeholder="raiting" />
+            <input
+              type="text"
+              id="addFilmAssessments"
+              placeholder="assessments"
+            />
+            <a id="add_film_btn" href="#">
+              <button class="add_film_btn">Add Film</button>
+            </a>
+          </form>
+        </div>
+      </div>
+
+      <div class="watch_now">
+        <p>Смотрят сейчас</p>
+        <div class="watch_now_container film_preview">
+          <div class="watch_now_img film_img">
+            <img
+              src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/600x900"
+              alt=""
+            />
+            <p>Игра престолов</p>
+          </div>
+          <div class="watch_now_img film_img">
+            <img
+              src="https://avatars.mds.yandex.net/get-kinopoisk-image/9784475/0151cae1-31a6-4352-b468-0e655fb2f870/576x"
+              alt=""
+            />
+          </div>
+          <div class="watch_now_img film_img">
+            <img
+              src="https://avatars.mds.yandex.net/get-kinopoisk-image/9784475/320f9fcf-0501-4f1e-94d0-741140c29831/576x"
+              alt=""
+            />
+          </div>
+          <div class="watch_now_img film_img">
+            <img
+              src="https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/e329c992-b253-4044-ac3c-a42756d4bd45/576x"
+              alt=""
+            />
+          </div>
+          <div class="watch_now_img film_img">
+            <img
+              src="https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/9a1964b2-78d3-477a-907d-6f59e55f7eca/576x"
+              alt=""
+            />
           </div>
         </div>
-        <button class="carousel-control-prev arrow_button" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next arrow_button" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-</div>
-<div class="watch_now"></div>
-<div class="best_setials"></div>
-<div class="new_serials"></div>
-<div class="footer"></div>
-</div>
-</body> 
-<script src="./js/main.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <div class="best_serials">
+        <p>Лучшие сериалы</p>
+        <div class="best_serials_container film_preview">
+          <div class="best_serials_img film_img">
+            <img
+              src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/600x900"
+              alt=""
+            />
+          </div>
+          <div class="best_serials_img film_img">
+            <img
+              src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/600x900"
+              alt=""
+            />
+          </div>
+          <div class="best_serials_img film_img">
+            <img
+              src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/600x900"
+              alt=""
+            />
+          </div>
+          <div class="best_serials_img film_img">
+            <img
+              src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/600x900"
+              alt=""
+            />
+          </div>
+          <div class="best_serials_img film_img">
+            <img
+              src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/600x900"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="new_serials"></div>
+      <div class="footer"></div>
+    </div>
+  </body>
+  <script src="./js/main.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
 </html>
