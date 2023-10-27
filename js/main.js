@@ -1,8 +1,18 @@
-//? connections
+//? connections add modal
 const addFilmBtn = document.querySelector("#add_film_btn");
 const addFilmModal = document.querySelector(".addFilmModal");
-
-//? modal logic
+const addFilmUrlInp = document.getElementById("addFilmUrl");
+const addFilmTitleInp = document.getElementById("addFilmTitle");
+const addFilmDescriptionInp = document.getElementById("addFilmDescription");
+const addFilmTrailerInp = document.getElementById("addFilmTrailer");
+const addFilmPlotInp = document.getElementById("addFilmPlot");
+const addFilmGenreInp = document.getElementById("addFilmGenre");
+const addFilmCountryInp = document.getElementById("addFilmCountry");
+const addFilmActorsInp = document.getElementById("addFilmActors");
+const addFilmDirectorsInp = document.getElementById("addFilmDirectors");
+const addFilmYearInp = document.getElementById("addFilmYear");
+const addFilmRaitingInp = document.getElementById("addFilmRaiting");
+const addFilmAssessmentsInp = document.getElementById("addFilmAssessments");
 
 // ?MAIN_VARIABLES
 const USERS_API = "http://localhost:8000/users";
@@ -27,7 +37,6 @@ const login_username_value = document.querySelector("#username_login_id");
 const login_password_value = document.querySelector("#password_login_id");
 const admin_panel_btn = document.querySelector("#admin_panel");
 // *FUNCTIONS
-console.log(login_password_value);
 function show_login_logout_register_buttons() {
   if (login_user_or_not()) {
     if (localStorage.getItem("username") === "admin@gmail.com") {
@@ -195,6 +204,64 @@ login_btn.addEventListener("click", () => {
 });
 login_btn_finish.addEventListener("click", login_function);
 
-!ADM;
+//! add modal
+//! read
+
+//? render
+async function render() {
+  let all_moovies = await get_all_users();
+  console.log(all_moovies);
+  all_moovies.forEach((item) => {
+    console.log(item);
+    console.log(document.getElementById("check1"));
+    document.getElementById("check1").innerHTML += `
+    <div class="watch_now_img film_img">
+              <img
+                src= ${item.image}
+                alt=""
+              />
+              <p>${item.title}</p>
+            </div>
+    `;
+  });
+}
 
 //! create
+
+async function create() {
+  let movieObj = {
+    title: addFilmTitleInp.value,
+    image: addFilmUrlInp.value,
+    description: addFilmDescriptionInp.value,
+    plot: addFilmPlotInp.value,
+    genre: addFilmGenreInp.value.split(","),
+    country: addFilmCountryInp.value,
+    actors: addFilmActorsInp.value.split(","),
+    directors: addFilmDirectorsInp.value.split(","),
+    year: addFilmYearInp.value,
+    rating: addFilmRaitingInp.value,
+    assessments: addFilmAssessmentsInp.value.split(","),
+  };
+
+  await fetch(MOOVIE_API, {
+    method: "POST",
+    body: JSON.stringify(movieObj),
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    // title: addFilmTitleInp.value,
+    // image: addFilmUrlInp.value,
+    // description: addFilmDescriptionInp.value,
+    // plot: addFilmPlotInp.value,
+    // genre: addFilmGenreInp.value.split(","),
+    // country: addFilmCountryInp.value,
+    // actors: addFilmActorsInp.value.split(","),
+    // directors: addFilmDirectorsInp.value.split(","),
+    // year: addFilmYearInp.value,
+    // rating: addFilmRaitingInp.value,
+    // assessments: addFilmAssessmentsInp.value.split(","),
+  });
+  render();
+}
+
+addFilmBtn.addEventListener("click", create);

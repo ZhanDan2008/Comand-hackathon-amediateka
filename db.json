@@ -1,205 +1,207 @@
 {
   "moovies": [
     {
-      "id": "...",
-      "image": "",
-      "title": "...",
-      "description": "...",
-      "trailer": "...",
-      "plot": "...",
+      "title": "",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "check1",
+      "plot": "",
       "genre": [
-        "...",
-        "..."
+        ""
       ],
-      "country": "...",
+      "country": "",
       "actors": [
-        "...",
-        "..."
+        ""
       ],
       "directors": [
-        "...",
-        "..."
+        ""
       ],
-      "year": "...",
-      "rating": "...",
-      "assessments": {
-        "amediateka": "...",
-        "kinopoisk": "...",
-        "IMGb": "..."
-      }
-    },
-    {
-      "id": "...",
-      "image": "...",
-      "title": "...",
-      "description": "...",
-      "trailer": "...",
-      "plot": "...",
-      "genre": [
-        "...",
-        "..."
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
       ],
-      "country": "...",
-      "actors": [
-        "...",
-        "..."
-      ],
-      "directors": [
-        "...",
-        "..."
-      ],
-      "year": "...",
-      "rating": "...",
-      "assessments": {
-        "amediateka": "...",
-        "kinopoisk": "...",
-        "IMGb": "..."
-      }
-    },
-    {
-      "id": "...",
-      "image": "...",
-      "title": "...",
-      "description": "...",
-      "trailer": "...",
-      "plot": "...",
-      "genre": [
-        "...",
-        "..."
-      ],
-      "country": "...",
-      "actors": [
-        "...",
-        "..."
-      ],
-      "directors": [
-        "...",
-        "..."
-      ],
-      "year": "...",
-      "rating": "...",
-      "assessments": {
-        "amediateka": "...",
-        "kinopoisk": "...",
-        "IMGb": "..."
-      }
-    }
-  ],
-  "users": [
-    {
-      "username": "kn",
-      "age": "98",
-      "password": "kn",
       "id": 1
     },
     {
-      "username": "casc",
-      "age": "34",
-      "password": "fsf",
+      "title": "",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "check2",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
       "id": 2
     },
     {
-      "username": "vdfv",
-      "age": "43",
-      "password": "asd",
+      "title": "",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "test",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
       "id": 3
     },
     {
-      "username": "cxz",
-      "age": "234",
-      "password": "asd",
+      "title": "хз что это. описание?",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "test",
+      "plot": "страшный фильм",
+      "genre": [
+        "трийлер",
+        "трашилка",
+        "ужас"
+      ],
+      "country": "америка",
+      "actors": [
+        "брет Питт",
+        "Максат",
+        "Дани"
+      ],
+      "directors": [
+        "Даниэль"
+      ],
+      "year": "2012",
+      "rating": "1000",
+      "assessments": [
+        "кинопоиск"
+      ],
       "id": 4
     },
     {
-      "username": "vsdv",
-      "age": "234",
-      "password": "asdasd",
+      "title": "ghjvgchgc",
+      "image": "",
+      "description": "jh;kjbjk",
+      "plot": "fghkcmhgcjg",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
       "id": 5
     },
     {
-      "username": "daniel",
-      "age": "15",
-      "password": "27462746abc",
+      "title": "",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "gjcvdjxsdx",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
       "id": 6
     },
     {
-      "username": "daniels",
-      "age": "123",
-      "password": "asd",
+      "title": "",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "check10",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
       "id": 7
     },
     {
-      "username": "jcd",
-      "age": "12",
-      "password": "qw",
+      "title": "",
+      "image": "",
+      "description": "",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
       "id": 8
     },
     {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
+      "title": "",
+      "image": "",
+      "description": "",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
       "id": 9
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 10
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 11
-    },
-    {
-      "username": "danielfsd",
-      "age": "34",
-      "password": "asd",
-      "id": 12
-    },
-    {
-      "username": "wdfsd",
-      "age": "324",
-      "password": "asd",
-      "id": 13
-    },
-    {
-      "username": "asdasd",
-      "age": "3",
-      "password": "pl",
-      "id": 14
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 15
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 16
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 17
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 18
     }
-  ]
+  ],
+  "users": []
 }
