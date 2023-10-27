@@ -62,7 +62,7 @@
   position: absolute;
   z-index: 15;
   left: 50%;
-  top: 50%;
+  top: 20%;
   transform: translate(-50%, -50%);
   width: 30%;
   height: 400px;
@@ -157,7 +157,6 @@ p {
 }
 
 .addFilmModal {
-  display: block;
   width: 30em;
   height: 20em;
   display: flex;
@@ -176,6 +175,7 @@ p {
   padding: 0.5em 0.2em;
   margin: 0.3em 0;
   height: 2em;
+  width: auto;
 }
 
 .test {
