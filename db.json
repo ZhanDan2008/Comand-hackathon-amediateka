@@ -1,58 +1,205 @@
 {
-  "moovies":[
+  "moovies": [
     {
-      "image":"",
-      "title":"...",
-      "description":"...",
-      "trailer":"...",
-      "plot":"...",
-      "genre":["...","..."],
-      "country":"...",
-      "actors":["...","..."],
-      "directors":["...","..."],
-      "year":"...",
-      "rating":"...",
-      "assessments":{
-        "amediateka":"...",
-        "kinopoisk":"...",
-        "IMGb":"..."
+      "id": "...",
+      "image": "",
+      "title": "...",
+      "description": "...",
+      "trailer": "...",
+      "plot": "...",
+      "genre": [
+        "...",
+        "..."
+      ],
+      "country": "...",
+      "actors": [
+        "...",
+        "..."
+      ],
+      "directors": [
+        "...",
+        "..."
+      ],
+      "year": "...",
+      "rating": "...",
+      "assessments": {
+        "amediateka": "...",
+        "kinopoisk": "...",
+        "IMGb": "..."
       }
-  },
-  {
-    "image":"...",
-    "title":"...",
-    "description":"...",
-    "trailer":"...",
-    "plot":"...",
-    "genre":["...","..."],
-    "country":"...",
-    "actors":["...","..."],
-    "directors":["...","..."],
-    "year":"...",
-    "rating":"...",
-    "assessments":{
-      "amediateka":"...",
-      "kinopoisk":"...",
-      "IMGb":"..."
+    },
+    {
+      "id": "...",
+      "image": "...",
+      "title": "...",
+      "description": "...",
+      "trailer": "...",
+      "plot": "...",
+      "genre": [
+        "...",
+        "..."
+      ],
+      "country": "...",
+      "actors": [
+        "...",
+        "..."
+      ],
+      "directors": [
+        "...",
+        "..."
+      ],
+      "year": "...",
+      "rating": "...",
+      "assessments": {
+        "amediateka": "...",
+        "kinopoisk": "...",
+        "IMGb": "..."
+      }
+    },
+    {
+      "id": "...",
+      "image": "...",
+      "title": "...",
+      "description": "...",
+      "trailer": "...",
+      "plot": "...",
+      "genre": [
+        "...",
+        "..."
+      ],
+      "country": "...",
+      "actors": [
+        "...",
+        "..."
+      ],
+      "directors": [
+        "...",
+        "..."
+      ],
+      "year": "...",
+      "rating": "...",
+      "assessments": {
+        "amediateka": "...",
+        "kinopoisk": "...",
+        "IMGb": "..."
+      }
     }
-},
-{
-  "image":"...",
-  "title":"...",
-  "description":"...",
-  "trailer":"...",
-  "plot":"...",
-  "genre":["...","..."],
-  "country":"...",
-  "actors":["...","..."],
-  "directors":["...","..."],
-  "year":"...",
-  "rating":"...",
-  "assessments":{
-    "amediateka":"...",
-    "kinopoisk":"...",
-    "IMGb":"..."
-  }
-}
-]
+  ],
+  "users": [
+    {
+      "username": "kn",
+      "age": "98",
+      "password": "kn",
+      "id": 1
+    },
+    {
+      "username": "casc",
+      "age": "34",
+      "password": "fsf",
+      "id": 2
+    },
+    {
+      "username": "vdfv",
+      "age": "43",
+      "password": "asd",
+      "id": 3
+    },
+    {
+      "username": "cxz",
+      "age": "234",
+      "password": "asd",
+      "id": 4
+    },
+    {
+      "username": "vsdv",
+      "age": "234",
+      "password": "asdasd",
+      "id": 5
+    },
+    {
+      "username": "daniel",
+      "age": "15",
+      "password": "27462746abc",
+      "id": 6
+    },
+    {
+      "username": "daniels",
+      "age": "123",
+      "password": "asd",
+      "id": 7
+    },
+    {
+      "username": "jcd",
+      "age": "12",
+      "password": "qw",
+      "id": 8
+    },
+    {
+      "username": "admin@gmail.com",
+      "age": "",
+      "password": "chocolate",
+      "admin": true,
+      "id": 9
+    },
+    {
+      "username": "admin@gmail.com",
+      "age": "",
+      "password": "chocolate",
+      "admin": true,
+      "id": 10
+    },
+    {
+      "username": "admin@gmail.com",
+      "age": "",
+      "password": "chocolate",
+      "admin": true,
+      "id": 11
+    },
+    {
+      "username": "danielfsd",
+      "age": "34",
+      "password": "asd",
+      "id": 12
+    },
+    {
+      "username": "wdfsd",
+      "age": "324",
+      "password": "asd",
+      "id": 13
+    },
+    {
+      "username": "asdasd",
+      "age": "3",
+      "password": "pl",
+      "id": 14
+    },
+    {
+      "username": "admin@gmail.com",
+      "age": "",
+      "password": "chocolate",
+      "admin": true,
+      "id": 15
+    },
+    {
+      "username": "admin@gmail.com",
+      "age": "",
+      "password": "chocolate",
+      "admin": true,
+      "id": 16
+    },
+    {
+      "username": "admin@gmail.com",
+      "age": "",
+      "password": "chocolate",
+      "admin": true,
+      "id": 17
+    },
+    {
+      "username": "admin@gmail.com",
+      "age": "",
+      "password": "chocolate",
+      "admin": true,
+      "id": 18
+    }
+  ]
 }
