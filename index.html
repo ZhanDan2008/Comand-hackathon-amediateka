@@ -14,7 +14,31 @@
   </head>
   <body>
     <div class="container1">
-      <div class="registration_modal">
+      <div id="admin_panel_id"    class="registration_modal create_moovie_modalka">
+        <div class="create_moovie_modalka_content">
+          <h2>Add Film</h2>
+          <form id="create_moovie_modalka_form">
+            <div class="one_part_of_create_moovie_modalka">
+            <input type="url" id="addFilmUrl" placeholder="add link" />
+            <input type="text" id="addFilmTitle" placeholder="title" />
+            <input type="text" id="addFilmDescription" placeholder="description" />
+            <input type="text" id="addFilmPlot" placeholder="plot" />
+            <input type="text" id="addFilmGenre" placeholder="genre" />
+          </div>
+          <div class="one_part_of_create_moovie_modalka">
+            <input type="text" id="addFilmCountry" placeholder="country" />
+            <input type="text" id="addFilmActors" placeholder="actors" />
+            <input type="text" id="addFilmDirectors" placeholder="directors" />
+            <input type="text" id="addFilmYear" placeholder="year" />
+            <input type="text" id="addFilmRaiting" placeholder="raiting" />
+          </div>
+              
+          </form>
+          <p id="place_for_errors_in_admin_panel"   class="errors"></p>
+          <button class="add_film_btn btn btn-warning">Add Film</button>
+        </div>
+      </div>
+      <div id="registration_id_modalka"   class="registration_modal">
         <h2>Registration</h2>
         <div class="content_of_registration_modal">
           <input id="username_id" type="text" placeholder="username..." />
@@ -33,9 +57,10 @@
       </div>
       <div id="login_modal" class="registration_modal">
         <h2>Login</h2>
+        
         <div class="content_of_registration_modal">
           <input id="username_login_id" type="text" placeholder="username..." />
-          <input
+          <input  
             id="password_login_id"
             type="password"
             placeholder="password..."
@@ -101,11 +126,11 @@
               />
             </div>
             <div class="carousel-item">
-              <div class="watch_now_img film_img">
-                <img src="https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600&amp;lazy=load" alt="">
-                <p></p>
-              </div>
-    
+              <img
+                src="https://i.amediateka.tech/resize/1920x960/_stor_/cms/showcases-bannerasset/d/55/e84c093c09ceeaf05479bc39bc635d55-2068-0ae9a3a08cc6491faba08ec69ecea2e0.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
           </div>
           <button
@@ -128,35 +153,10 @@
           </button>
         </div>
       </div>
-      <div class="test">
-        <div class="addFilmModal">
-          <h2>Add Film</h2>
-          <form id="addFilmForm">
-            <input type="url" id="addFilmUrl" placeholder="add link" />
-            <input type="text" id="addFilmTitle" placeholder="title" />
-            <input type="text" id="addFilmDescription" placeholder="title" />
-            <input type="url" id="addFilmTrailer" placeholder="trailer url" />
-            <input type="text" id="addFilmPlot" placeholder="plot" />
-            <input type="text" id="addFilmGenre" placeholder="genre" />
-            <input type="text" id="addFilmCountry" placeholder="country" />
-            <input type="text" id="addFilmActors" placeholder="actors" />
-            <input type="text" id="addFilmDirectors" placeholder="directors" />
-            <input type="text" id="addFilmYear" placeholder="year" />
-            <input type="text" id="addFilmRaiting" placeholder="raiting" />
-            <input
-              type="text"
-              id="addFilmAssessments"
-              placeholder="assessments"
-            />
-            <a id="add_film_btn" href="#">
-              <button class="add_film_btn">Add Film</button>
-            </a>
-          </form>
-        </div>
-      </div>
+
 
       <div class="watch_now">
-        <p>Смотрят сейчас</p>
+        <h2  class=""  style="color:aliceblue">Смотрят сейчас</h2>
         <div id="check1" class="watch_now_container film_preview"></div>
       </div>
       <div class="best_serials">
@@ -197,6 +197,8 @@
       <div class="new_serials"></div>
       <div class="footer"></div>
     </div>
+
+<img src="./images/logo.svg" style="background-color: aqua;"/><img src="./images/цикады.png" style="width: 30px;"> </marquee>
   </body>
   <script src="./js/main.js"></script>
   <script
