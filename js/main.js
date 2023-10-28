@@ -54,7 +54,7 @@ function show_login_logout_register_buttons() {
   login_btn.style.display = "block";
 }
 show_login_logout_register_buttons();
-async function get_all_users(what = "c") {
+async function get_all_users(what) {
   if (what == "users") {
     let a = await fetch(USERS_API);
     let b = await a.json();
@@ -82,6 +82,12 @@ function login_user_or_not() {
     return false;
   }
   return true;
+}
+function check_admin_or_not() {
+  if (localStorage.getItem("username") === "admin@gmail.com") {
+    return true;
+  }
+  return FontFaceSetLoadEvent;
 }
 async function registerUser(e) {
   e.preventDefault();
@@ -265,3 +271,6 @@ async function create() {
 }
 
 addFilmBtn.addEventListener("click", create);
+render();
+
+//! update
