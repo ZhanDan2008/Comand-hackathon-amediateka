@@ -5,7 +5,6 @@ const edit_image = document.querySelector("#edit_image");
 const edit_description = document.querySelector("#edit_description");
 const edit_modal = document.querySelector("#edit-movie-modal");
 const edit_form = document.querySelector("#edit-movie-form");
-const check1 = document.querySelector(".movie-list");
 
 // ?MAIN_VARIABLES
 const USERS_API = "http://localhost:8000/users";
