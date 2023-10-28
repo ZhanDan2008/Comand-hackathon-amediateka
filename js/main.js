@@ -13,6 +13,12 @@ const addFilmDirectorsInp = document.getElementById("addFilmDirectors");
 const addFilmYearInp = document.getElementById("addFilmYear");
 const addFilmRaitingInp = document.getElementById("addFilmRaiting");
 const addFilmAssessmentsInp = document.getElementById("addFilmAssessments");
+// откат 
+//? conection upd modal
+// const updModal = document.querySelector("#updateModal");
+const urlUpd = document.querySelector("#urlUpdate");
+const titleUpd = document.querySelector("#titleUpdate");
+const updateModal = document.getElementById("update_modal");
 
 // ?MAIN_VARIABLES
 const USERS_API = "http://localhost:8000/users";
@@ -210,9 +216,7 @@ login_btn.addEventListener("click", () => {
 });
 login_btn_finish.addEventListener("click", login_function);
 
-//! add modal
 //! read
-
 //? render
 async function render() {
   let all_moovies = await get_all_users();
@@ -222,10 +226,13 @@ async function render() {
     console.log(document.getElementById("check1"));
     document.getElementById("check1").innerHTML += `
     <div class="watch_now_img film_img">
+    <div class='upd' id="updateModal">
+          <img src="./images/updMenu.png" alt="Update menu">
+        </div>
               <img
                 src= ${item.image}
-                alt=""
               />
+              
               <p>${item.title}</p>
             </div>
     `;
@@ -255,18 +262,20 @@ async function create() {
     headers: {
       "Content-Type": "application/json;charset=utf-8",
     },
-    // title: addFilmTitleInp.value,
-    // image: addFilmUrlInp.value,
-    // description: addFilmDescriptionInp.value,
-    // plot: addFilmPlotInp.value,
-    // genre: addFilmGenreInp.value.split(","),
-    // country: addFilmCountryInp.value,
-    // actors: addFilmActorsInp.value.split(","),
-    // directors: addFilmDirectorsInp.value.split(","),
-    // year: addFilmYearInp.value,
-    // rating: addFilmRaitingInp.value,
-    // assessments: addFilmAssessmentsInp.value.split(","),
   });
+
+  addFilmTitleInp.value = "";
+  addFilmUrlInp.value = "";
+  addFilmDescriptionInp.value = "";
+  addFilmPlotInp.value = "";
+  addFilmGenreInp.value = "";
+  addFilmCountryInp.value = "";
+  addFilmActorsInp.value = [];
+  addFilmDirectorsInp.value = [];
+  addFilmYearInp.value = "";
+  addFilmRaitingInp.value = "";
+  addFilmAssessmentsInp.value = [];
+
   render();
 }
 
@@ -274,3 +283,50 @@ addFilmBtn.addEventListener("click", create);
 render();
 
 //! update
+
+updateModal.addEventListener("click", async (e) => {
+  if (e.target.classList.contains("upd")) {
+    // Извлекаем ID фильма из data-id атрибута
+    const filmId = e.target.getAttribute("data-id");
+    let res = await fetch(`${MOOVIE_API}/${filmId}`);
+    let movieObj = await res.json();
+    urlUpd.value = movieObj.image;
+    titleUpd.value = movieObj.title;
+
+    // Устанавливаем data-id атрибут для кнопки обновления
+    updModal.setAttribute("data-id", filmId);
+
+    updModal.style.display = "block";
+  }
+});
+
+updateModal.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  // Извлекаем ID фильма из data-id атрибута кнопки
+  const filmId = updModal.getAttribute("data-id");
+
+  const updatedObj = {
+    title: titleUpd.value,
+    image: urlUpd.value,
+  };
+
+  await fetch(`${MOOVIE_API}/${filmId}`, {
+    method: "PUT",
+    body: JSON.stringify(updatedObj),
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+  });
+
+  render();
+  updModal.style.display = "none";
+});
+
+updateModal.addEventListener("click", function (event) {
+    
+  // Проверяем, был ли клик на элемент #updateModal или его дочерних элементах
+  if (event.target === updateModal) {
+    console.log("oooooooo");
+    updateModal.style.display = "block"; // Скрываем модальное окно
+  }
+});
