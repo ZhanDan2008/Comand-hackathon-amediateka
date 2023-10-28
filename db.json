@@ -1,32 +1,6 @@
 {
   "moovies": [
     {
-      "title": "хз что это. описание?",
-      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "test",
-      "plot": "страшный фильм",
-      "genre": [
-        "трийлер",
-        "трашилка",
-        "ужас"
-      ],
-      "country": "америка",
-      "actors": [
-        "брет Питт",
-        "Максат",
-        "Дани"
-      ],
-      "directors": [
-        "Даниэль"
-      ],
-      "year": "2012",
-      "rating": "1000",
-      "assessments": [
-        "кинопоиск"
-      ],
-      "id": 4
-    },
-    {
       "title": "test update",
       "image": "https://images.pexels.com/photos/12987878/pexels-photo-12987878.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       "description": "test update",
@@ -50,7 +24,9 @@
       "directors": "",
       "year": "",
       "rating": "",
-      "assessments": "",
+      "assessments": [
+        ""
+      ],
       "id": 10
     },
     {
@@ -65,20 +41,19 @@
       "directors": "",
       "year": "",
       "rating": "",
-<<<<<<< HEAD
-      "assessments": "",
+      "assessments": [
+        ""
+      ],
       "id": 12
     },
     {
       "title": "во все тяжкие дома",
       "image": "https://images.pexels.com/photos/18876570/pexels-photo-18876570/free-photo-of-gecko.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       "description": "я устал",
-      "id": 13
-=======
+      "id": 9,
       "assessments": [
         ""
-      ],
-      "id": 9
+      ]
     },
     {
       "title": "Девушка в красном",
@@ -167,55 +142,6 @@
         ""
       ],
       "id": 13
-    },
-    {
-      "title": "",
-      "image": "",
-      "description": "",
-      "plot": "",
-      "genre": [
-        ""
-      ],
-      "country": "",
-      "actors": [
-        ""
-      ],
-      "directors": [
-        ""
-      ],
-      "year": "",
-      "rating": "",
-      "assessments": [
-        ""
-      ],
-      "id": 14
-    },
-    {
-      "title": "Бомбастик",
-      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "Поворот не туда",
-      "plot": "страшный фильм",
-      "genre": [
-        "трийлер",
-        "трашилка",
-        "ужас"
-      ],
-      "country": "америка",
-      "actors": [
-        "брет Питт",
-        "Максат",
-        "Дани"
-      ],
-      "directors": [
-        "Даниэль"
-      ],
-      "year": "2012",
-      "rating": "1000",
-      "assessments": [
-        "кинопоиск"
-      ],
-      "id": 15
->>>>>>> 78468de51691948fd8cf9d6e3c0cc48c8eea77a9
     }
   ],
   "users": []
