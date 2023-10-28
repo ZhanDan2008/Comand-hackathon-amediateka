@@ -65,6 +65,7 @@
       "directors": "",
       "year": "",
       "rating": "",
+<<<<<<< HEAD
       "assessments": "",
       "id": 12
     },
@@ -73,6 +74,148 @@
       "image": "https://images.pexels.com/photos/18876570/pexels-photo-18876570/free-photo-of-gecko.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       "description": "я устал",
       "id": 13
+=======
+      "assessments": [
+        ""
+      ],
+      "id": 9
+    },
+    {
+      "title": "Девушка в красном",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 10
+    },
+    {
+      "title": "Бомбастик",
+      "image": "https://images.pexels.com/photos/18851700/pexels-photo-18851700/free-photo-of-a-woman-in-a-white-dress-and-brown-cardigan.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 11
+    },
+    {
+      "title": "ГудДог",
+      "image": "https://images.pexels.com/photos/18842628/pexels-photo-18842628/free-photo-of-a-dog-wearing-a-blue-jacket-and-blue-jeans.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 12
+    },
+    {
+      "title": "Оч страшный костер",
+      "image": "https://images.pexels.com/photos/14792749/pexels-photo-14792749.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 13
+    },
+    {
+      "title": "",
+      "image": "",
+      "description": "",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 14
+    },
+    {
+      "title": "Бомбастик",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "Поворот не туда",
+      "plot": "страшный фильм",
+      "genre": [
+        "трийлер",
+        "трашилка",
+        "ужас"
+      ],
+      "country": "америка",
+      "actors": [
+        "брет Питт",
+        "Максат",
+        "Дани"
+      ],
+      "directors": [
+        "Даниэль"
+      ],
+      "year": "2012",
+      "rating": "1000",
+      "assessments": [
+        "кинопоиск"
+      ],
+      "id": 15
+>>>>>>> 78468de51691948fd8cf9d6e3c0cc48c8eea77a9
     }
   ],
   "users": []

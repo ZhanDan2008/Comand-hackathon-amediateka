@@ -279,6 +279,7 @@ async function render() {
               <img
                 src= ${item.image}
               />
+              
               <p>${item.title}</p>
               <div class="sss">
             ${
@@ -317,7 +318,7 @@ edit_form.addEventListener("submit", async (e) => {
     image: edit_image.value,
     description: edit_description.value,
   };
-  console.log("Click on movie-list detected");
+//   console.log("Click on movie-list detected");
 
   const id = e.target.id.substring(15);
   console.log(id);

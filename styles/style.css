@@ -118,10 +118,35 @@
 
 .movie-list {
   background-color: #000;
+  position: relative;
 }
 
 .movie-list p {
   color: white;
+}
+
+#updateModal {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+#updateModal img {
+  position: absolute;
+  height: 25px;
+  width: auto;
+  z-index: 15;
+  border: 1px solid #000000;
+  margin: 6%;
+}
+
+#update_modal {
+  background-color: #000;
+  height: 300px;
+  width: auto;
+  position: absolute;
+  z-index: 30;
+  display: none;
 }
 
 .first_page {
