@@ -1,205 +1,233 @@
 {
   "moovies": [
     {
-      "id": "...",
+      "title": "",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "check1",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 1
+    },
+    {
+      "title": "",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "check2",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 2
+    },
+    {
+      "title": "",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "test",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 3
+    },
+    {
+      "title": "хз что это. описание?",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "test",
+      "plot": "страшный фильм",
+      "genre": [
+        "трийлер",
+        "трашилка",
+        "ужас"
+      ],
+      "country": "америка",
+      "actors": [
+        "брет Питт",
+        "Максат",
+        "Дани"
+      ],
+      "directors": [
+        "Даниэль"
+      ],
+      "year": "2012",
+      "rating": "1000",
+      "assessments": [
+        "кинопоиск"
+      ],
+      "id": 4
+    },
+    {
+      "title": "ghjvgchgc",
       "image": "",
-      "title": "...",
-      "description": "...",
-      "trailer": "...",
-      "plot": "...",
+      "description": "jh;kjbjk",
+      "plot": "fghkcmhgcjg",
       "genre": [
-        "...",
-        "..."
+        ""
       ],
-      "country": "...",
+      "country": "",
       "actors": [
-        "...",
-        "..."
+        ""
       ],
       "directors": [
-        "...",
-        "..."
+        ""
       ],
-      "year": "...",
-      "rating": "...",
-      "assessments": {
-        "amediateka": "...",
-        "kinopoisk": "...",
-        "IMGb": "..."
-      }
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 5
     },
     {
-      "id": "...",
-      "image": "...",
-      "title": "...",
-      "description": "...",
-      "trailer": "...",
-      "plot": "...",
+      "title": "",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "gjcvdjxsdx",
+      "plot": "",
       "genre": [
-        "...",
-        "..."
+        ""
       ],
-      "country": "...",
+      "country": "",
       "actors": [
-        "...",
-        "..."
+        ""
       ],
       "directors": [
-        "...",
-        "..."
+        ""
       ],
-      "year": "...",
-      "rating": "...",
-      "assessments": {
-        "amediateka": "...",
-        "kinopoisk": "...",
-        "IMGb": "..."
-      }
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 6
     },
     {
-      "id": "...",
-      "image": "...",
-      "title": "...",
-      "description": "...",
-      "trailer": "...",
-      "plot": "...",
+      "title": "",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "check10",
+      "plot": "",
       "genre": [
-        "...",
-        "..."
+        ""
       ],
-      "country": "...",
+      "country": "",
       "actors": [
-        "...",
-        "..."
+        ""
       ],
       "directors": [
-        "...",
-        "..."
+        ""
       ],
-      "year": "...",
-      "rating": "...",
-      "assessments": {
-        "amediateka": "...",
-        "kinopoisk": "...",
-        "IMGb": "..."
-      }
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 7
+    },
+    {
+      "title": "",
+      "image": "",
+      "description": "",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 8
+    },
+    {
+      "title": "",
+      "image": "",
+      "description": "",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 9
+    },
+    {
+      "title": "fsld,f;f",
+      "image": "clsmdlfd",
+      "description": "check check check",
+      "plot": "",
+      "genre": [
+        ""
+      ],
+      "country": "",
+      "actors": [
+        ""
+      ],
+      "directors": [
+        ""
+      ],
+      "year": "",
+      "rating": "",
+      "assessments": [
+        ""
+      ],
+      "id": 10
     }
   ],
   "users": [
     {
-      "username": "kn",
-      "age": "98",
-      "password": "kn",
-      "id": 1
-    },
-    {
-      "username": "casc",
-      "age": "34",
-      "password": "fsf",
-      "id": 2
-    },
-    {
-      "username": "vdfv",
-      "age": "43",
-      "password": "asd",
-      "id": 3
-    },
-    {
-      "username": "cxz",
-      "age": "234",
-      "password": "asd",
-      "id": 4
-    },
-    {
-      "username": "vsdv",
-      "age": "234",
-      "password": "asdasd",
-      "id": 5
-    },
-    {
-      "username": "daniel",
-      "age": "15",
-      "password": "27462746abc",
-      "id": 6
-    },
-    {
-      "username": "daniels",
-      "age": "123",
-      "password": "asd",
-      "id": 7
-    },
-    {
-      "username": "jcd",
-      "age": "12",
-      "password": "qw",
-      "id": 8
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 9
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 10
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 11
-    },
-    {
-      "username": "danielfsd",
-      "age": "34",
-      "password": "asd",
-      "id": 12
-    },
-    {
-      "username": "wdfsd",
-      "age": "324",
-      "password": "asd",
-      "id": 13
-    },
-    {
-      "username": "asdasd",
-      "age": "3",
-      "password": "pl",
-      "id": 14
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 15
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 16
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 17
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 18
+      
     }
   ]
 }
