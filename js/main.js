@@ -1,5 +1,6 @@
+
 //? connections add modal
-const addFilmBtn = document.querySelector("#add_film_btn");
+const addFilmBtn = document.querySelector(".add_film_btn");
 const addFilmModal = document.querySelector(".addFilmModal");
 const addFilmUrlInp = document.getElementById("addFilmUrl");
 const addFilmTitleInp = document.getElementById("addFilmTitle");
@@ -22,9 +23,9 @@ const MOOVIE_API = "http://localhost:8000/moovies";
 // ?ПЕРЕМЕННЫЕ
 const logout_btn = document.getElementById("logout_id");
 const login_btn = document.getElementById("login_id");
-const registration_modal = document.querySelector(".registration_modal");
+const registration_modal = document.querySelector("#registration_id_modalka");
 const login_modal = document.getElementById("login_modal");
-const register_btn = document.querySelector("#register_id");
+const register_btn = document.querySelector("#register_id");  
 const register_btn_finish = document.querySelector("#finish_registration_btn");
 const login_btn_finish = document.querySelector("#finish_login_btn");
 const username_value = document.getElementById("username_id");
@@ -35,10 +36,13 @@ const place_for_errors = document.querySelector("#errors_in_register");
 const place_for_errors_in_login = document.querySelector("#errors_in_login");
 const login_username_value = document.querySelector("#username_login_id");
 const login_password_value = document.querySelector("#password_login_id");
-const admin_panel_btn = document.querySelector("#admin_panel");
+// !ADMIN PANEL
+const admin_panel_btn = document.getElementById("admin_panel")
+const admin_panel = document.getElementById("admin_panel_id")
+const place_for_errors_in_admin_panel = document.getElementById("place_for_errors_in_admin_panel")
 // *FUNCTIONS
 function show_login_logout_register_buttons() {
-  if (login_user_or_not()) {
+  if (check_admin_or_not()) {
     if (localStorage.getItem("username") === "admin@gmail.com") {
       admin_panel_btn.style.display = "block";
     }
@@ -54,7 +58,7 @@ function show_login_logout_register_buttons() {
   login_btn.style.display = "block";
 }
 show_login_logout_register_buttons();
-async function get_all_users_or_moovies(what = undefined) {
+async function get_all_users_or_moovies(what) {
   if (what == "users") {
     let a = await fetch(USERS_API);
     let b = await a.json();
@@ -82,9 +86,16 @@ function login_user_or_not() {
     return false;
   }
   return true;
-} 
+}
+function check_admin_or_not() {
+  if (localStorage.getItem("username") === "admin@gmail.com") {
+    return true;
+  }
+  return false;
+}
 async function registerUser(e) {
   e.preventDefault();
+  e.stopPropagation()
   if (
     username_value.value === "admin@gmail.com" &&
     password_value.value === "chocolate" &&
@@ -183,6 +194,7 @@ logout_btn.addEventListener("click", logout_function);
 
 // *FUNCTIONS
 async function login_function() {
+  e.stopPropagation()
   let all_users = await get_all_users_or_moovies("users");
   let a = all_users.filter(
     (item) =>
@@ -209,7 +221,7 @@ login_btn_finish.addEventListener("click", login_function);
 
 //? render
 async function render() {
-  let all_moovies = await get_all_users();
+  let all_moovies = await get_all_users_or_moovies();
   console.log(all_moovies);
   all_moovies.forEach((item) => {
     console.log(item);
@@ -228,19 +240,34 @@ async function render() {
 
 //! create
 
-async function create() {
+async function create(e) {
+  e.stopPropagation()
+  if(
+    !addFilmTitleInp.value ||
+    !addFilmUrlInp.value ||
+    !addFilmDescriptionInp.value||
+    !addFilmGenreInp.value.split(", ")||
+    !addFilmCountryInp.value||
+    !addFilmActorsInp.value.split(", ")||
+    !addFilmDirectorsInp.value.split(", ")||
+    !addFilmYearInp.value||
+    !addFilmRaitingInp.value
+    ){
+      place_for_errors_in_admin_panel.innerText = "Некоторые поля пусты, господин!"
+      return;
+    }
+  
   let movieObj = {
     title: addFilmTitleInp.value,
     image: addFilmUrlInp.value,
     description: addFilmDescriptionInp.value,
-    plot: addFilmPlotInp.value,
-    genre: addFilmGenreInp.value.split(","),
+    genre: addFilmGenreInp.value.split(", "),
     country: addFilmCountryInp.value,
-    actors: addFilmActorsInp.value.split(","),
-    directors: addFilmDirectorsInp.value.split(","),
+    actors: addFilmActorsInp.value.split(", "),
+    directors: addFilmDirectorsInp.value.split(", "),
     year: addFilmYearInp.value,
     rating: addFilmRaitingInp.value,
-    assessments: addFilmAssessmentsInp.value.split(","),
+    plot: addFilmPlotInp.value
   };
 
   await fetch(MOOVIE_API, {
@@ -248,20 +275,23 @@ async function create() {
     body: JSON.stringify(movieObj),
     headers: {
       "Content-Type": "application/json;charset=utf-8",
-    },
-    // title: addFilmTitleInp.value,
-    // image: addFilmUrlInp.value,
-    // description: addFilmDescriptionInp.value,
-    // plot: addFilmPlotInp.value,
-    // genre: addFilmGenreInp.value.split(","),
-    // country: addFilmCountryInp.value,
-    // actors: addFilmActorsInp.value.split(","),
-    // directors: addFilmDirectorsInp.value.split(","),
-    // year: addFilmYearInp.value,
-    // rating: addFilmRaitingInp.value,
-    // assessments: addFilmAssessmentsInp.value.split(","),
-  });
+    }})
+    place_for_errors_in_admin_panel.style.color = "green"
+    place_for_errors_in_admin_panel.innerText= "Успешно!"
+    setTimeout(()=>{
+      place_for_errors_in_admin_panel.innerText=''
+      place_for_errors_in_admin_panel.style.color = 'red'
+      admin_panel.style.display = "none"
+    },1000)
+
   render();
 }
-
+admin_panel_btn.addEventListener("click",(e)=>{
+  e.preventDefault()
+  e.stopPropagation()
+  admin_panel.style.display = "block"
+})
 addFilmBtn.addEventListener("click", create);
+
+render();
+
