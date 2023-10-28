@@ -203,67 +203,70 @@ login_btn.addEventListener("click", () => {
 login_btn_finish.addEventListener("click", login_function);
 
 // ! create
-// Обработчик клика по кнопке "Добавить фильм"
-document.getElementById("add-movie-button").addEventListener("click", () => {
-  // Показать модальное окно для добавления фильма
+function showAddMovieModal() {
   document.getElementById("add-movie-modal").style.display = "block";
-});
+}
 
-// Обработчик отправки формы добавления фильма
-document
-  .getElementById("add-movie-form")
-  .addEventListener("submit", async (event) => {
-    event.preventDefault();
+// Функция для отправки формы добавления фильма
+async function addMovie(event) {
+  event.preventDefault();
 
-    const title = document.getElementById("title").value;
-    const description = document.getElementById("description").value;
-    const image = document.getElementById("image").value;
-    const trailerUrl = document.getElementById("trailerUrl").value;
-    const plot = document.getElementById("plot").value;
-    const genre = document.getElementById("genre").value;
-    const country = document.getElementById("country").value;
-    const actors = document.getElementById("actors").value;
-    const directors = document.getElementById("directors").value;
-    const year = document.getElementById("year").value;
-    const rating = document.getElementById("rating").value;
-    const assessments = document.getElementById("assessments").value;
+  const title = document.getElementById("title").value;
+  const description = document.getElementById("description").value;
+  const image = document.getElementById("image").value;
+  const trailerUrl = document.getElementById("trailerUrl").value;
+  const plot = document.getElementById("plot").value;
+  const genre = document.getElementById("genre").value;
+  const country = document.getElementById("country").value;
+  const actors = document.getElementById("actors").value;
+  const directors = document.getElementById("directors").value;
+  const year = document.getElementById("year").value;
+  const rating = document.getElementById("rating").value;
+  const assessments = document.getElementById("assessments").value;
 
-    const response = await fetch(MOOVIE_API, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        title,
-        description,
-        image,
-        trailerUrl,
-        plot,
-        genre,
-        country,
-        actors,
-        directors,
-        year,
-        rating,
-        assessments,
-      }),
-    });
-    document.getElementById("add-movie-modal").style.display = "none";
-
-    document.getElementById("title").value = "";
-    document.getElementById("description").value = "";
-    document.getElementById("image").value = "";
-    document.getElementById("trailerUrl").value = "";
-    document.getElementById("plot").value = "";
-    document.getElementById("genre").value = "";
-    document.getElementById("country").value = "";
-    document.getElementById("actors").value = "";
-    document.getElementById("directors").value = "";
-    document.getElementById("year").value = "";
-    document.getElementById("rating").value = "";
-    document.getElementById("assessments").value = "";
-    render();
+  const response = await fetch(MOOVIE_API, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      title,
+      description,
+      image,
+      trailerUrl,
+      plot,
+      genre,
+      country,
+      actors,
+      directors,
+      year,
+      rating,
+      assessments,
+    }),
   });
+  document.getElementById("add-movie-modal").style.display = "none";
+
+  document.getElementById("title").value = "";
+  document.getElementById("description").value = "";
+  document.getElementById("image").value = "";
+  document.getElementById("trailerUrl").value = "";
+  document.getElementById("plot").value = "";
+  document.getElementById("genre").value = "";
+  document.getElementById("country").value = "";
+  document.getElementById("actors").value = "";
+  document.getElementById("directors").value = "";
+  document.getElementById("year").value = "";
+  document.getElementById("rating").value = "";
+  document.getElementById("assessments").value = "";
+  render();
+}
+
+
+document
+  .getElementById("add-movie-button")
+  .addEventListener("click", showAddMovieModal);
+
+document.getElementById("add-movie-form").addEventListener("submit", addMovie);
 
 // //! read
 
@@ -297,32 +300,29 @@ async function render() {
 render();
 
 // ! update
-document.addEventListener("click", async (e) => {
-  if (e.target.classList.contains("edit_card")) {
-    const movieId = e.target.id;
-    let response = await fetch(`${MOOVIE_API}/${movieId}`);
-    let movieObj = await response.json();
-    edit_modal.style.display = "block";
-    edit_title.value = movieObj.title;
-    edit_image.value = movieObj.image;
-    edit_description.value = movieObj.description;
 
-    edit_form.id = "edit-movie-form" + movieObj.id;
-  }
-});
+async function showEditMovieModal(e) {
+  const movieId = e.target.id;
+  let response = await fetch(`${MOOVIE_API}/${movieId}`);
+  let movieObj = await response.json();
+  edit_modal.style.display = "block";
+  edit_title.value = movieObj.title;
+  edit_image.value = movieObj.image;
+  edit_description.value = movieObj.description;
 
-edit_form.addEventListener("submit", async (e) => {
+  edit_form.id = "edit-movie-form" + movieObj.id;
+}
+
+async function editMovie(e) {
   e.preventDefault();
   const updatedObj = {
     title: edit_title.value,
     image: edit_image.value,
     description: edit_description.value,
   };
-//   console.log("Click on movie-list detected");
 
   const id = e.target.id.substring(15);
-  console.log(id);
-
+  
   await fetch(`${MOOVIE_API}/${id}/`, {
     method: "PUT",
     body: JSON.stringify(updatedObj),
@@ -332,9 +332,11 @@ edit_form.addEventListener("submit", async (e) => {
   });
   render();
   edit_modal.style.display = "none";
-});
+}
 
-document.addEventListener("click", async (e) => {
+// ! delete
+
+async function deleteMovie(e) {
   if (e.target.classList.contains("del_card")) {
     const id = e.target.id;
     await fetch(`${MOOVIE_API}/${id}`, {
@@ -342,4 +344,17 @@ document.addEventListener("click", async (e) => {
     });
     render();
   }
+}
+
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("edit_card")) {
+    showEditMovieModal(e);
+  }
+});
+
+document.getElementById("edit-movie-form").addEventListener("submit", editMovie);
+
+document.addEventListener("click", (e) => {
+  deleteMovie(e);
 });
