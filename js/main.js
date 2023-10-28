@@ -13,12 +13,12 @@ const addFilmDirectorsInp = document.getElementById("addFilmDirectors");
 const addFilmYearInp = document.getElementById("addFilmYear");
 const addFilmRaitingInp = document.getElementById("addFilmRaiting");
 const addFilmAssessmentsInp = document.getElementById("addFilmAssessments");
-// откат 
+
 //? conection upd modal
-// const updModal = document.querySelector("#updateModal");
+const updModal = document.querySelector("#updateModal");
+const upd = document.querySelector(".upd");
 const urlUpd = document.querySelector("#urlUpdate");
-const titleUpd = document.querySelector("#titleUpdate");
-const updateModal = document.getElementById("update_modal");
+const titleUpd = document.querySelector("#titleupdate");
 
 // ?MAIN_VARIABLES
 const USERS_API = "http://localhost:8000/users";
@@ -231,6 +231,7 @@ async function render() {
         </div>
               <img
                 src= ${item.image}
+                alt=""
               />
               
               <p>${item.title}</p>
@@ -284,49 +285,36 @@ render();
 
 //! update
 
-updateModal.addEventListener("click", async (e) => {
+updModal.addEventListener("click", async (e) => {
   if (e.target.classList.contains("upd")) {
-    // Извлекаем ID фильма из data-id атрибута
-    const filmId = e.target.getAttribute("data-id");
+    const filmId = e.target.id;
     let res = await fetch(`${MOOVIE_API}/${filmId}`);
     let movieObj = await res.json();
-    urlUpd.value = movieObj.image;
+    console.log(filmId);
+    updModal.style.display = "block";
+    urlUpd.value = movieObj.title;
     titleUpd.value = movieObj.title;
 
-    // Устанавливаем data-id атрибут для кнопки обновления
-    updModal.setAttribute("data-id", filmId);
-
-    updModal.style.display = "block";
+    updModal.id = "updModal" + movieObj.id;
   }
 });
 
-updateModal.addEventListener("submit", async (e) => {
+updModal.addEventListener("submit", async (e) => {
   e.preventDefault();
-  // Извлекаем ID фильма из data-id атрибута кнопки
-  const filmId = updModal.getAttribute("data-id");
-
   const updatedObj = {
+    url: urlUpd.value,
     title: titleUpd.value,
-    image: urlUpd.value,
   };
 
-  await fetch(`${MOOVIE_API}/${filmId}`, {
+  const id = e.target.id.split(" ")[1];
+
+  await fetch(`${MOOVIE_API}/${id}`, {
     method: "PUT",
     body: JSON.stringify(updatedObj),
     headers: {
       "Content-Type": "application/json;charset=utf-8",
     },
   });
-
   render();
   updModal.style.display = "none";
-});
-
-updateModal.addEventListener("click", function (event) {
-    
-  // Проверяем, был ли клик на элемент #updateModal или его дочерних элементах
-  if (event.target === updateModal) {
-    console.log("oooooooo");
-    updateModal.style.display = "block"; // Скрываем модальное окно
-  }
 });
