@@ -116,12 +116,12 @@
   position: relative;
 }
 
-.whatch_now {
+.movie-list {
   background-color: #000;
 }
 
-.whatch_now p {
-  color: black;
+.movie-list p {
+  color: white;
 }
 
 .first_page {
@@ -156,7 +156,7 @@ p {
   border-radius: 0.5em;
 }
 
-.addFilmModal {
+.add-movie-modal {
   width: 30em;
   height: 20em;
   display: flex;
@@ -169,7 +169,7 @@ p {
   margin: 3em;
 }
 
-#addFilmForm input {
+#add-movie-form input {
   border: none;
   border-radius: 8px;
   padding: 0.5em 0.2em;
@@ -178,7 +178,7 @@ p {
   width: auto;
 }
 
-.test {
+.add-movie-modal {
   display: flex;
   justify-content: center;
   align-items: center;

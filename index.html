@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -12,8 +12,8 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <div class="container1">
+<body>
+        <div class="container1">
       <div class="registration_modal">
         <h2>Registration</h2>
         <div class="content_of_registration_modal">
@@ -128,80 +128,53 @@
           </button>
         </div>
       </div>
-      <div class="test">
-        <div class="addFilmModal">
-          <h2>Add Film</h2>
-          <form id="addFilmForm">
-            <input type="url" id="addFilmUrl" placeholder="add link" />
-            <input type="text" id="addFilmTitle" placeholder="title" />
-            <input type="text" id="addFilmDescription" placeholder="title" />
-            <input type="url" id="addFilmTrailer" placeholder="trailer url" />
-            <input type="text" id="addFilmPlot" placeholder="plot" />
-            <input type="text" id="addFilmGenre" placeholder="genre" />
-            <input type="text" id="addFilmCountry" placeholder="country" />
-            <input type="text" id="addFilmActors" placeholder="actors" />
-            <input type="text" id="addFilmDirectors" placeholder="directors" />
-            <input type="text" id="addFilmYear" placeholder="year" />
-            <input type="text" id="addFilmRaiting" placeholder="raiting" />
+    <!-- Элементы для отображения фильмов -->
+    <div id="movie-list">
+      <p>Смотрят сейчас</p>
+        <div id="check1" class="movie-list film_preview"></div>
+        <!-- Здесь будут отображаться фильмы -->
+    </div>
+
+    <!-- Кнопка для добавления нового фильма -->
+    <button id="add-movie-button">Добавить фильм</button>
+
+
+    <div id="add-movie-modal" class="modal">
+        <form id="add-movie-form">
+            <input type="text" id="title" placeholder="Название фильма">
+            <input type="text" id="description" placeholder="Описание">
+            <input type="url" id="image" placeholder="Картинка"/>
+            <input type="url" id="trailerUrl" placeholder="ссылка на трейлер"/>
+            <input type="text" id="plot" placeholder="Сюжет"/>
+            <input type="text" id="genre" placeholder="Жанр" />
+            <input type="text" id="country" placeholder="Страна" />
+            <input type="text" id="actors" placeholder="Актеры" />
+            <input type="text" id="directors" placeholder="Режисеры" />
+            <input type="text" id="year" placeholder="Год" />
+            <input type="text" id="rating" placeholder="Рэйтинг" />
             <input
               type="text"
-              id="addFilmAssessments"
-              placeholder="assessments"
+              id="assessments"
+              placeholder="Оценили"
             />
-            <a id="add_film_btn" href="#">
-              <button class="add_film_btn">Add Film</button>
-            </a>
-          </form>
-        </div>
-      </div>
-
-      <div class="watch_now">
-        <p>Смотрят сейчас</p>
-        <div id="check1" class="watch_now_container film_preview"></div>
-      </div>
-      <div class="best_serials">
-        <p>Лучшие сериалы</p>
-        <div class="best_serials_container film_preview">
-          <div class="best_serials_img film_img">
-            <img
-              src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/600x900"
-              alt=""
-            />
-          </div>
-          <div class="best_serials_img film_img">
-            <img
-              src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/600x900"
-              alt=""
-            />
-          </div>
-          <div class="best_serials_img film_img">
-            <img
-              src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/600x900"
-              alt=""
-            />
-          </div>
-          <div class="best_serials_img film_img">
-            <img
-              src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/600x900"
-              alt=""
-            />
-          </div>
-          <div class="best_serials_img film_img">
-            <img
-              src="https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/dd78edfd-6a1f-486c-9a86-6acbca940418/600x900"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-      <div class="new_serials"></div>
-      <div class="footer"></div>
+            <!-- Другие поля ... -->
+            <button type="submit">Добавить</button>
+        </form>
     </div>
-  </body>
-  <script src="./js/main.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
+
+    <!-- Модальное окно для редактирования фильма -->
+    <div id="edit-movie-modal" class="modal">
+        <!-- Форма для редактирования фильма -->
+        <form id="edit-movie-form">
+            <!-- Ваши поля для редактирования фильма -->
+            <input type="text" id="edit_title" placeholder="Название фильма">
+            <input type="text" id="edit_description" placeholder="Описание">
+            <input type="url" id="edit_image" placeholder="Картинка">
+            <!-- Другие поля ... -->
+            <button type="submit">Сохранить</button>
+        </form>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
 </html>

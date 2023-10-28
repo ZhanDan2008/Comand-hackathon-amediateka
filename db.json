@@ -1,72 +1,6 @@
 {
   "moovies": [
     {
-      "title": "",
-      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "check1",
-      "plot": "",
-      "genre": [
-        ""
-      ],
-      "country": "",
-      "actors": [
-        ""
-      ],
-      "directors": [
-        ""
-      ],
-      "year": "",
-      "rating": "",
-      "assessments": [
-        ""
-      ],
-      "id": 1
-    },
-    {
-      "title": "",
-      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "check2",
-      "plot": "",
-      "genre": [
-        ""
-      ],
-      "country": "",
-      "actors": [
-        ""
-      ],
-      "directors": [
-        ""
-      ],
-      "year": "",
-      "rating": "",
-      "assessments": [
-        ""
-      ],
-      "id": 2
-    },
-    {
-      "title": "",
-      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "test",
-      "plot": "",
-      "genre": [
-        ""
-      ],
-      "country": "",
-      "actors": [
-        ""
-      ],
-      "directors": [
-        ""
-      ],
-      "year": "",
-      "rating": "",
-      "assessments": [
-        ""
-      ],
-      "id": 3
-    },
-    {
       "title": "хз что это. описание?",
       "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       "description": "test",
@@ -93,114 +27,52 @@
       "id": 4
     },
     {
-      "title": "ghjvgchgc",
-      "image": "",
-      "description": "jh;kjbjk",
-      "plot": "fghkcmhgcjg",
-      "genre": [
-        ""
-      ],
-      "country": "",
-      "actors": [
-        ""
-      ],
-      "directors": [
-        ""
-      ],
-      "year": "",
-      "rating": "",
-      "assessments": [
-        ""
-      ],
+      "title": "test update",
+      "image": "https://images.pexels.com/photos/12987878/pexels-photo-12987878.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "test update",
       "id": 5
     },
     {
-      "title": "",
-      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "gjcvdjxsdx",
-      "plot": "",
-      "genre": [
-        ""
-      ],
-      "country": "",
-      "actors": [
-        ""
-      ],
-      "directors": [
-        ""
-      ],
-      "year": "",
-      "rating": "",
-      "assessments": [
-        ""
-      ],
-      "id": 6
-    },
-    {
-      "title": "",
-      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-      "description": "check10",
-      "plot": "",
-      "genre": [
-        ""
-      ],
-      "country": "",
-      "actors": [
-        ""
-      ],
-      "directors": [
-        ""
-      ],
-      "year": "",
-      "rating": "",
-      "assessments": [
-        ""
-      ],
+      "title": "осень",
+      "image": "https://images.pexels.com/photos/15086124/pexels-photo-15086124/free-photo-of-yellow-leaves-on-tree-in-autumn.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "description": "",
       "id": 7
     },
     {
-      "title": "",
-      "image": "",
+      "title": "test5",
       "description": "",
+      "image": "https://images.pexels.com/photos/18444579/pexels-photo-18444579/free-photo-of-slices-of-apple-and-golden-rings-lying-on-a-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "trailerUrl": "",
       "plot": "",
-      "genre": [
-        ""
-      ],
+      "genre": "",
       "country": "",
-      "actors": [
-        ""
-      ],
-      "directors": [
-        ""
-      ],
+      "actors": "",
+      "directors": "",
       "year": "",
       "rating": "",
-      "assessments": [
-        ""
-      ],
-      "id": 8
+      "assessments": "",
+      "id": 10
     },
     {
-      "title": "",
-      "image": "",
+      "title": "test7",
       "description": "",
+      "image": "https://images.pexels.com/photos/18324587/pexels-photo-18324587/free-photo-of-close-up-of-closed-eye-of-horse.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "trailerUrl": "",
       "plot": "",
-      "genre": [
-        ""
-      ],
+      "genre": "",
       "country": "",
-      "actors": [
-        ""
-      ],
-      "directors": [
-        ""
-      ],
+      "actors": "",
+      "directors": "",
       "year": "",
       "rating": "",
-      "assessments": [
-        ""
-      ],
-      "id": 9
+      "assessments": "",
+      "id": 12
+    },
+    {
+      "title": "во все тяжкие дома",
+      "image": "https://images.pexels.com/photos/18876570/pexels-photo-18876570/free-photo-of-gecko.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "description": "я устал",
+      "id": 13
     }
   ],
   "users": []
