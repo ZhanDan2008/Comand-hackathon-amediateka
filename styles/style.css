@@ -3,8 +3,13 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body{
+    position: relative;
+}
 .container1 {
   width: 100%;
+  background-color: #111113;
   position: relative;
 }
 .navbar {
@@ -58,7 +63,9 @@
   position: absolute;
   z-index: 15;
   left: 50%;
+
   top: 50%;
+
   transform: translate(-50%, -50%);
   width: 30%;
   height: 400px;
@@ -68,9 +75,11 @@
   border: 2px solid black;
   box-shadow: 10px 10px 5px black;
 }
+
 .admin_modal{
     width: 50%;
     height: 450px;
+
 }
 .content_of_registration_modal {
   display: flex;
@@ -126,7 +135,7 @@
   max-width: 100%;
   height: auto;
   padding: 1em 0;
-  background-color: black;
+  background-color:#111113;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,6 +165,7 @@ p {
   object-fit: cover;
   border-radius: 0.5em;
 }
+
 
 .sss .card_btn {
   color: white;
@@ -250,4 +260,6 @@ p {
   text-align: center;
   border: none;
   left: 10em;
+
 }
+

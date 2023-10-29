@@ -1,3 +1,4 @@
+
 // //? connections add modal
 const updateForm = document.querySelector("#edit-movie-form");
 const edit_title = document.querySelector("#edit_title");
@@ -7,6 +8,7 @@ const edit_modal = document.querySelector("#edit-movie-modal");
 const edit_form = document.querySelector("#edit-movie-form");
 let moovieId = 0;
 
+
 // ?MAIN_VARIABLES
 const USERS_API = "http://localhost:8000/users";
 const MOOVIE_API = "http://localhost:8000/moovies";
@@ -15,9 +17,9 @@ const MOOVIE_API = "http://localhost:8000/moovies";
 // ?ПЕРЕМЕННЫЕ
 const logout_btn = document.getElementById("logout_id");
 const login_btn = document.getElementById("login_id");
-const registration_modal = document.querySelector(".registration_modal");
+const registration_modal = document.querySelector("#registration_id_modalka");
 const login_modal = document.getElementById("login_modal");
-const register_btn = document.querySelector("#register_id");
+const register_btn = document.querySelector("#register_id");  
 const register_btn_finish = document.querySelector("#finish_registration_btn");
 const login_btn_finish = document.querySelector("#finish_login_btn");
 const username_value = document.getElementById("username_id");
@@ -29,10 +31,13 @@ const place_for_errors_in_login = document.querySelector("#errors_in_login");
 const place_for_errors_in_admin_panel = document.getElementById("place_for_errors_in_admin_panel")
 const login_username_value = document.querySelector("#username_login_id");
 const login_password_value = document.querySelector("#password_login_id");
-const admin_panel_btn = document.querySelector("#admin_panel");
+// !ADMIN PANEL
+const admin_panel_btn = document.getElementById("admin_panel")
+const admin_panel = document.getElementById("admin_panel_id")
+const place_for_errors_in_admin_panel = document.getElementById("place_for_errors_in_admin_panel")
 // *FUNCTIONS
 function show_login_logout_register_buttons() {
-  if (login_user_or_not()) {
+  if (check_admin_or_not()) {
     if (localStorage.getItem("username") === "admin@gmail.com") {
       admin_panel_btn.style.display = "flex";
     }
@@ -48,7 +53,7 @@ function show_login_logout_register_buttons() {
   login_btn.style.display = "block";
 }
 show_login_logout_register_buttons();
-async function get_all_users(what) {
+async function get_all_users_or_moovies(what) {
   if (what == "users") {
     let a = await fetch(USERS_API);
     let b = await a.json();
@@ -68,7 +73,7 @@ function save_username_in_localstorage(username) {
   show_login_logout_register_buttons();
 }
 async function get_one_user(username) {
-  let all_users = await get_all_users("users");
+  let all_users = await get_all_users_or_moovies("users");
   return all_users.find((item) => item.username === username);
 }
 function login_user_or_not() {
@@ -85,6 +90,7 @@ function check_admin_or_not() {
 }
 async function registerUser(e) {
   e.preventDefault();
+  e.stopPropagation()
   if (
     username_value.value === "admin@gmail.com" &&
     password_value.value === "chocolate" &&
@@ -94,15 +100,19 @@ async function registerUser(e) {
     place_for_errors.style.color = "green";
     place_for_errors.innerText = "С возвращеием Админ!";
     setTimeout(() => {
-      place_for_errors.innerText = "";
+      
       registration_modal.style.display = "none";
+      place_for_errors.innerText = "";
+      place_for_errors.style.color = "red"
     }, 1000);
     save_username_in_localstorage(username_value.value);
     username_value.value = "";
     age_value.value = "";
     password_value.value = "";
     password_conf_value.value = "";
+
     render()
+
     return;
   }
   if (
@@ -144,7 +154,6 @@ async function registerUser(e) {
     place_for_errors.innerText = "";
     registration_modal.style.display = "none";
   }, 1000);
-  place_for_errors.innerText = "";
   save_username_in_localstorage(username_value.value);
   username_value.value = "";
   age_value.value = "";
@@ -170,7 +179,8 @@ logout_btn.addEventListener("click", logout_function);
 
 // *FUNCTIONS
 async function login_function() {
-  let all_users = await get_all_users("users");
+  e.stopPropagation()
+  let all_users = await get_all_users_or_moovies("users");
   let a = all_users.filter(
     (item) =>
       item.username === login_username_value.value &&
@@ -276,6 +286,7 @@ document.getElementById("add-movie-form").addEventListener("submit", addMovie);
 // //! read
 
 async function render() {
+
   const movieList = document.querySelector("#movie-list");
   const response = await fetch(MOOVIE_API);
   const movies = await response.json();
@@ -286,6 +297,7 @@ async function render() {
     movieList.innerHTML += `
         <div class="movie-list film_img">
               <img class = 'card' id="${item.id}"
+
                 src= ${item.image}
               />
               
@@ -318,12 +330,14 @@ async function showEditMovieModal(e) {
   //   edit_form.id = "edit-movie-form" + movieObj.id;
 }
 
+
 async function editMovie(e) {
   e.preventDefault();
   const updatedObj = {
     title: edit_title.value,
     image: edit_image.value,
     description: edit_description.value,
+
   };
   const id = moovieId;
   await fetch(`${MOOVIE_API}/${id}/`, {
@@ -331,11 +345,14 @@ async function editMovie(e) {
     body: JSON.stringify(updatedObj),
     headers: {
       "Content-Type": "application/json;charset=utf-8",
+
     },
   });
+
   render();
   edit_modal.style.display = "none";
 }
+
 
 // ! delete
 const exit_btn = document.querySelector("#exit-button")
@@ -420,5 +437,6 @@ document
 exit_btn.addEventListener("click",()=>{
   location.reload()
 })
+
 
 
