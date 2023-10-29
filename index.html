@@ -128,17 +128,11 @@
           </button>
         </div>
       </div>
-    <!-- Элементы для отображения фильмов -->
+      <!-- !Спсиок фильмов -->
     <div id="movie-list">
       <p>Смотрят сейчас</p>
-        <div id="check1" class="movie-list film_preview"></div>
-        <!-- Здесь будут отображаться фильмы -->
     </div>
-
-    <!-- Кнопка для добавления нового фильма -->
-    <button id="add-movie-button">Добавить фильм</button>
-
-
+    <!-- !Модалка для добавления фильмов -->
     <div id="add-movie-modal" class="modal">
         <form id="add-movie-form">
             <input type="text" id="title" placeholder="Название фильма">
@@ -157,20 +151,17 @@
               id="assessments"
               placeholder="Оценили"
             />
-            <!-- Другие поля ... -->
             <button type="submit">Добавить</button>
         </form>
     </div>
 
-    <!-- Модальное окно для редактирования фильма -->
+    <!-- !Модалка для редактирования фильмов -->
     <div id="edit-movie-modal" class="modal">
-        <!-- Форма для редактирования фильма -->
-        <form id="edit-movie-form">
-            <!-- Ваши поля для редактирования фильма -->
+      <form id="edit-movie-form">
+          <h2>Изменение данных</h2>
             <input type="text" id="edit_title" placeholder="Название фильма">
             <input type="text" id="edit_description" placeholder="Описание">
             <input type="url" id="edit_image" placeholder="Картинка">
-            <!-- Другие поля ... -->
             <button type="submit">Сохранить</button>
         </form>
     </div>

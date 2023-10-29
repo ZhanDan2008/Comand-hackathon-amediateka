@@ -5,6 +5,7 @@ const edit_image = document.querySelector("#edit_image");
 const edit_description = document.querySelector("#edit_description");
 const edit_modal = document.querySelector("#edit-movie-modal");
 const edit_form = document.querySelector("#edit-movie-form");
+let moovieId = 0;
 
 // ?MAIN_VARIABLES
 const USERS_API = "http://localhost:8000/users";
@@ -32,7 +33,7 @@ const admin_panel_btn = document.querySelector("#admin_panel");
 function show_login_logout_register_buttons() {
   if (login_user_or_not()) {
     if (localStorage.getItem("username") === "admin@gmail.com") {
-      admin_panel_btn.style.display = "block";
+      admin_panel_btn.style.display = "flex";
     }
     login_btn.style.display = "none";
     logout_btn.style.display = "block";
@@ -207,7 +208,6 @@ function showAddMovieModal() {
   document.getElementById("add-movie-modal").style.display = "block";
 }
 
-// Функция для отправки формы добавления фильма
 async function addMovie(event) {
   event.preventDefault();
 
@@ -244,7 +244,6 @@ async function addMovie(event) {
       assessments,
     }),
   });
-  document.getElementById("add-movie-modal").style.display = "none";
 
   document.getElementById("title").value = "";
   document.getElementById("description").value = "";
@@ -258,12 +257,15 @@ async function addMovie(event) {
   document.getElementById("year").value = "";
   document.getElementById("rating").value = "";
   document.getElementById("assessments").value = "";
+
+  document.getElementById("add-movie-modal").style.display = "none";
+
   render();
 }
 
 
 document
-  .getElementById("add-movie-button")
+  .getElementById("admin_panel")
   .addEventListener("click", showAddMovieModal);
 
 document.getElementById("add-movie-form").addEventListener("submit", addMovie);
@@ -275,7 +277,7 @@ async function render() {
   const response = await fetch(MOOVIE_API);
   const movies = await response.json();
   movieList.innerHTML = "";
-  
+
   movies.forEach((item) => {
     movieList.innerHTML += `
         <div class="movie-list film_img">
@@ -285,13 +287,9 @@ async function render() {
               
               <p>${item.title}</p>
               <div class="sss">
-            ${
-              
-                `<button id=${item.id} class="btn card_btn edit_card">Update</button>
-            <button id=${item.id} class="btn card_btn del_card">Delete</button>`
-                 
-            }
-          </div>
+            ${`<button id=${item.id} class="btn card_btn edit_card">Update</button>
+            <button id=${item.id} class="btn card_btn del_card">Delete</button>`}
+                </div>
             
         </div>
     `;
@@ -303,14 +301,16 @@ render();
 
 async function showEditMovieModal(e) {
   const movieId = e.target.id;
+  //   console.log(movieId);
   let response = await fetch(`${MOOVIE_API}/${movieId}`);
   let movieObj = await response.json();
-  edit_modal.style.display = "block";
+  edit_modal.style.display = "flex";
   edit_title.value = movieObj.title;
   edit_image.value = movieObj.image;
   edit_description.value = movieObj.description;
+  moovieId = movieId
 
-  edit_form.id = "edit-movie-form" + movieObj.id;
+  //   edit_form.id = "edit-movie-form" + movieObj.id;
 }
 
 async function editMovie(e) {
@@ -321,8 +321,9 @@ async function editMovie(e) {
     description: edit_description.value,
   };
 
-  const id = e.target.id.substring(15);
-  
+  console.log(moovieId);
+  const id = moovieId;
+
   await fetch(`${MOOVIE_API}/${id}/`, {
     method: "PUT",
     body: JSON.stringify(updatedObj),
@@ -346,14 +347,15 @@ async function deleteMovie(e) {
   }
 }
 
-
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("edit_card")) {
     showEditMovieModal(e);
   }
 });
 
-document.getElementById("edit-movie-form").addEventListener("submit", editMovie);
+document
+  .getElementById("edit-movie-form")
+  .addEventListener("submit", editMovie);
 
 document.addEventListener("click", (e) => {
   deleteMovie(e);
