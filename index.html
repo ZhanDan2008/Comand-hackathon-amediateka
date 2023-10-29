@@ -11,9 +11,14 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./styles/detail_view.css">
   </head>
-<body>
-        <div class="container1">
+  
+  <body>
+    <button type="button" id="exit-button"  class="btn btn-danger width-30" style="display: none;">Exit</button>
+    <section>
+    <div class="container1">
+      
       <div class="registration_modal">
         <h2>Registration</h2>
         <div class="content_of_registration_modal">
@@ -123,7 +128,7 @@
             data-bs-target="#carouselExampleControls"
             data-bs-slide="next"
           >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
@@ -133,12 +138,12 @@
       <p>Смотрят сейчас</p>
     </div>
     <!-- !Модалка для добавления фильмов -->
-    <div id="add-movie-modal" class="modal">
+    <div id="add-movie-modal" class="registration_modal admin_modal">
+      <h2 id="add_moovie_h2">Add moovie</h2>
         <form id="add-movie-form">
             <input type="text" id="title" placeholder="Название фильма">
             <input type="text" id="description" placeholder="Описание">
             <input type="url" id="image" placeholder="Картинка"/>
-            <input type="url" id="trailerUrl" placeholder="ссылка на трейлер"/>
             <input type="text" id="plot" placeholder="Сюжет"/>
             <input type="text" id="genre" placeholder="Жанр" />
             <input type="text" id="country" placeholder="Страна" />
@@ -146,15 +151,11 @@
             <input type="text" id="directors" placeholder="Режисеры" />
             <input type="text" id="year" placeholder="Год" />
             <input type="text" id="rating" placeholder="Рэйтинг" />
-            <input
-              type="text"
-              id="assessments"
-              placeholder="Оценили"
-            />
+            <p id="place_for_errors_in_admin_panel" class="errors"></p>
             <button type="submit">Добавить</button>
         </form>
     </div>
-
+    
     <!-- !Модалка для редактирования фильмов -->
     <div id="edit-movie-modal" class="modal">
       <form id="edit-movie-form">
@@ -164,8 +165,8 @@
             <input type="url" id="edit_image" placeholder="Картинка">
             <button type="submit">Сохранить</button>
         </form>
-    </div>
-
-    <script src="js/main.js"></script>
+    </div></section>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 </html>

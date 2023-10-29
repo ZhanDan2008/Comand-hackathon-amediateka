@@ -58,7 +58,7 @@
   position: absolute;
   z-index: 15;
   left: 50%;
-  top: 20%;
+  top: 50%;
   transform: translate(-50%, -50%);
   width: 30%;
   height: 400px;
@@ -67,6 +67,10 @@
   background-color: #111113;
   border: 2px solid black;
   box-shadow: 10px 10px 5px black;
+}
+.admin_modal{
+    width: 50%;
+    height: 450px;
 }
 .content_of_registration_modal {
   display: flex;
@@ -159,16 +163,10 @@ p {
 }
 
 #add-movie-modal {
-  width: 33em;
-  height: auto;
-  position: absolute;
-  z-index: 20;
-  border-radius: 8px;
-  padding: 1em 3em;
-  margin: 1em 2em;
   display: none;
-  top: 5em;
-  background-color: #00000077;
+  position: absolute;
+  top: 39%;
+  left: 49%;
 }
 
 #add-movie-form button {
@@ -184,11 +182,21 @@ p {
 }
 
 #add-movie-form {
-  margin: 0 1em;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+  margin-left: 6%;
 }
-
+#add-movie-form input{
+    background-color: #353935;
+    color: white;
+}
+#add-movie-form button{
+    margin-left: 10%;
+    position: absolute;
+    top: 100%;
+    margin-top: 7%;
+}
 #add-movie-form input {
   border: none;
   border-radius: 8px;
@@ -211,11 +219,14 @@ p {
   border-radius: 8px;
   padding: 1em 1em;
 }
-
+#add_moovie_h2{
+    margin-left: 35%;
+}
 #edit-movie-form {
   display: flex;
   flex-direction: column;
-  margin: 0 1em;
+  margin: 0 2em;
+
 }
 
 #edit-movie-form h2 {

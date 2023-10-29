@@ -26,6 +26,7 @@ const password_value = document.getElementById("password_id");
 const password_conf_value = document.getElementById("password_conf_id");
 const place_for_errors = document.querySelector("#errors_in_register");
 const place_for_errors_in_login = document.querySelector("#errors_in_login");
+const place_for_errors_in_admin_panel = document.getElementById("place_for_errors_in_admin_panel")
 const login_username_value = document.querySelector("#username_login_id");
 const login_password_value = document.querySelector("#password_login_id");
 const admin_panel_btn = document.querySelector("#admin_panel");
@@ -80,7 +81,7 @@ function check_admin_or_not() {
   if (localStorage.getItem("username") === "admin@gmail.com") {
     return true;
   }
-  return FontFaceSetLoadEvent;
+  return false;
 }
 async function registerUser(e) {
   e.preventDefault();
@@ -90,20 +91,6 @@ async function registerUser(e) {
     age_value.value === "" &&
     password_conf_value.value === ""
   ) {
-    let userObj = {
-      username: username_value.value,
-      age: age_value.value,
-      password: password_value.value,
-      admin: true,
-    };
-
-    await fetch(USERS_API, {
-      method: "POST",
-      body: JSON.stringify(userObj),
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-    });
     place_for_errors.style.color = "green";
     place_for_errors.innerText = "С возвращеием Админ!";
     setTimeout(() => {
@@ -115,7 +102,7 @@ async function registerUser(e) {
     age_value.value = "";
     password_value.value = "";
     password_conf_value.value = "";
-
+    render()
     return;
   }
   if (
@@ -174,6 +161,7 @@ register_btn_finish.addEventListener("click", registerUser);
 function logout_function() {
   localStorage.removeItem("username");
   show_login_logout_register_buttons();
+  render()
 }
 logout_btn.addEventListener("click", logout_function);
 
@@ -212,43 +200,53 @@ async function addMovie(event) {
   event.preventDefault();
 
   const title = document.getElementById("title").value;
-  const description = document.getElementById("description").value;
+  let description = document.getElementById("description").value;
   const image = document.getElementById("image").value;
-  const trailerUrl = document.getElementById("trailerUrl").value;
-  const plot = document.getElementById("plot").value;
-  const genre = document.getElementById("genre").value;
+  let plot = document.getElementById("plot").value;
+  const genre = document.getElementById("genre").value.split(', ');
   const country = document.getElementById("country").value;
-  const actors = document.getElementById("actors").value;
-  const directors = document.getElementById("directors").value;
+  const actors = document.getElementById("actors").value.split(', ');
+  const directors = document.getElementById("directors").value.split(', ');
   const year = document.getElementById("year").value;
   const rating = document.getElementById("rating").value;
-  const assessments = document.getElementById("assessments").value;
-
+  if(!title || !description || !image || !plot || !genre || !country || !actors || !directors || !year || !rating){
+    place_for_errors_in_admin_panel.innerText = 'Не все поля заполнены!'
+    return
+  }
+  if(description.length>200 || plot.length>200){
+    let yes_or_not = confirm("Длина поля сюжета или описания превышают 500символов.Если нажмете yes, то мы сохраним первые 500 символов.Если no, то измените содержимое полей.")
+    if(yes_or_not){
+      plot = plot.slice(0,200)
+      description = description.slice(0,200)
+    }
+    else{
+      return;
+    }
+  }
+  const movieData = {
+    title,
+    description,
+    image,
+    plot,
+    genre,
+    country,
+    actors,
+    directors,
+    year,
+    rating,
+  };
+  
   const response = await fetch(MOOVIE_API, {
     method: "POST",
+    body: JSON.stringify(movieData),
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/json;charset=utf-8",
     },
-    body: JSON.stringify({
-      title,
-      description,
-      image,
-      trailerUrl,
-      plot,
-      genre,
-      country,
-      actors,
-      directors,
-      year,
-      rating,
-      assessments,
-    }),
   });
 
   document.getElementById("title").value = "";
   document.getElementById("description").value = "";
   document.getElementById("image").value = "";
-  document.getElementById("trailerUrl").value = "";
   document.getElementById("plot").value = "";
   document.getElementById("genre").value = "";
   document.getElementById("country").value = "";
@@ -256,9 +254,14 @@ async function addMovie(event) {
   document.getElementById("directors").value = "";
   document.getElementById("year").value = "";
   document.getElementById("rating").value = "";
-  document.getElementById("assessments").value = "";
+  place_for_errors_in_admin_panel.style.color = 'green'
+  place_for_errors_in_admin_panel.innerText = 'Успешно'
+  setTimeout(()=>{
+    place_for_errors_in_admin_panel.style.color = 'red'
+    place_for_errors_in_admin_panel.innerText = ""
+    document.getElementById("add-movie-modal").style.display = "none";
+  },1000)
 
-  document.getElementById("add-movie-modal").style.display = "none";
 
   render();
 }
@@ -277,24 +280,26 @@ async function render() {
   const response = await fetch(MOOVIE_API);
   const movies = await response.json();
   movieList.innerHTML = "";
-
+  
   movies.forEach((item) => {
+    console.log(check_admin_or_not())
     movieList.innerHTML += `
         <div class="movie-list film_img">
-              <img
+              <img class = 'card' id="${item.id}"
                 src= ${item.image}
               />
               
               <p>${item.title}</p>
               <div class="sss">
-            ${`<button id=${item.id} class="btn card_btn edit_card">Update</button>
-            <button id=${item.id} class="btn card_btn del_card">Delete</button>`}
+            ${(check_admin_or_not()) ? `<button id=${item.id} class="btn card_btn edit_card is_admin">Update</button>
+            <button id=${item.id} class="btn card_btn del_card is_admin">Delete</button>` : ''}
                 </div>
             
         </div>
     `;
   });
-}
+  }
+
 render();
 
 // ! update
@@ -320,10 +325,7 @@ async function editMovie(e) {
     image: edit_image.value,
     description: edit_description.value,
   };
-
-  console.log(moovieId);
   const id = moovieId;
-
   await fetch(`${MOOVIE_API}/${id}/`, {
     method: "PUT",
     body: JSON.stringify(updatedObj),
@@ -336,7 +338,8 @@ async function editMovie(e) {
 }
 
 // ! delete
-
+const exit_btn = document.querySelector("#exit-button")
+console.log(exit_btn)
 async function deleteMovie(e) {
   if (e.target.classList.contains("del_card")) {
     const id = e.target.id;
@@ -346,17 +349,76 @@ async function deleteMovie(e) {
     render();
   }
 }
+async function detail_view(e){
+  exit_btn.style.display = "block"
+  if(e.target.classList.contains("card")){
+    let pk = await get_all_users()
+    let obj = pk.find(item => e.target.id == item.id)
+    document.querySelector("section").innerHTML = `
+  <div class="container_of_detail_view">
+<h1>${obj.title}</h1>
+<div class="main_of_detail_view">
+<div class="left_part_of_detail_view">
+  <img src="${obj.image}">
+</div>
+<div class="right_part_of_detail_view">
+  <div class="left">
+    <h2 class="h2_of_detail_view">Description:</h2>
+    <p class="description_of_detail_view">${obj.description}
+    </p>
+    <h2 class="h2_of_detail_view">Plot:</h2>
+    <p class="plot_of_detail_view">${obj.plot}
+    </p>
+    <h2 class="h2_of_detail_view">Genres:</h2>
+    <p class="genres_of_detail_view">${obj.genre}
+    </p>
+    <h2 class="h2_of_detail_view">Country:</h2>
+    <p class="country_of_detail_view">
+    ${obj.country}
+    </p>
+  </div>
 
+  <div class="right">
+    <h2 class="h2_of_detail_view">Actors:</h2>
+    <p class="actors_of_detail_view">
+    ${obj.actors}
+    </p>
+    <h2 class="h2_of_detail_view">Directors:</h2>
+    <p class="directors_of_detail_view">
+    ${obj.directors}
+    </p>
+    <h2 class="h2_of_detail_view">Year:</h2>
+    <p class="year_of_detail_view">
+    ${obj.year}
+    </p>
+    <h2 class="h2_of_detail_view">Rating:</h2>
+    <p class="rating_of_detail_view">
+    ${obj.rating}
+    </p>
+  </div>
+</div>
+
+
+</div>
+</div>
+  </div>
+    `
+  }
+}
 document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("edit_card")) {
+  if (e.target.classList.contains("edit_card") && check_admin_or_not()) {
     showEditMovieModal(e);
   }
+  deleteMovie(e);
+  detail_view(e)
 });
 
 document
   .getElementById("edit-movie-form")
   .addEventListener("submit", editMovie);
 
-document.addEventListener("click", (e) => {
-  deleteMovie(e);
-});
+exit_btn.addEventListener("click",()=>{
+  location.reload()
+})
+
+
