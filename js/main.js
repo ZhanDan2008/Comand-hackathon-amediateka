@@ -9,6 +9,7 @@ const edit_form = document.querySelector("#edit-movie-form");
 let moovieId = 0;
 
 
+
 // ?MAIN_VARIABLES
 const USERS_API = "http://localhost:8000/users";
 const MOOVIE_API = "http://localhost:8000/moovies";
@@ -28,7 +29,6 @@ const password_value = document.getElementById("password_id");
 const password_conf_value = document.getElementById("password_conf_id");
 const place_for_errors = document.querySelector("#errors_in_register");
 const place_for_errors_in_login = document.querySelector("#errors_in_login");
-const place_for_errors_in_admin_panel = document.getElementById("place_for_errors_in_admin_panel")
 const login_username_value = document.querySelector("#username_login_id");
 const login_password_value = document.querySelector("#password_login_id");
 // !ADMIN PANEL
@@ -37,7 +37,7 @@ const admin_panel = document.getElementById("admin_panel_id")
 const place_for_errors_in_admin_panel = document.getElementById("place_for_errors_in_admin_panel")
 // *FUNCTIONS
 function show_login_logout_register_buttons() {
-  if (check_admin_or_not()) {
+  if (login_user_or_not()) {
     if (localStorage.getItem("username") === "admin@gmail.com") {
       admin_panel_btn.style.display = "flex";
     }
@@ -159,6 +159,7 @@ async function registerUser(e) {
   age_value.value = "";
   password_value.value = "";
   password_conf_value.value = "";
+  show_login_logout_register_buttons()
 }
 
 register_btn.addEventListener("click", (e) => {
@@ -178,8 +179,9 @@ logout_btn.addEventListener("click", logout_function);
 // ?переменные
 
 // *FUNCTIONS
-async function login_function() {
+async function login_function(e) {
   e.stopPropagation()
+  console.log("WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOORKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
   let all_users = await get_all_users_or_moovies("users");
   let a = all_users.filter(
     (item) =>
@@ -367,9 +369,10 @@ async function deleteMovie(e) {
   }
 }
 async function detail_view(e){
-  exit_btn.style.display = "block"
+
   if(e.target.classList.contains("card")){
-    let pk = await get_all_users()
+    exit_btn.style.display = "block"
+    let pk = await get_all_users_or_moovies()
     let obj = pk.find(item => e.target.id == item.id)
     document.querySelector("section").innerHTML = `
   <div class="container_of_detail_view">

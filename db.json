@@ -1,80 +1,30 @@
 {
   "moovies": [
     {
-      "title": "Arkein",
-      "image": "data:image/jpeg;base64,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",
-      "description": "Анимация выполненная с особым стилем",
+      "title": "asdsfs",
+      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJYA4gMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAADAAECBAUGB//EAEMQAAEDAgMFAwgGBgsAAAAAAAEAAgMEEQUSYQYTITFRQXHBByIycoGhsdEWNIORkpMUFRczRIIjQkNTVFVzdMLh8f/EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EACIRAQACAQQCAwEBAAAAAAAAAAABEQIDEhNRFEEhMWEEMv/aAAwDAQACEQMRAD8A8bTgWUuSXNdQ3Lr7E6dOBfkgZLmjOp5mRskdG4Mf6LiLB3d1Q7KxCWilZEsErJSWgnAUrJw1WktCyVlPKnDUoDsnsiWSypRYdkrImVLKlFh5UrImVLKlAXanA4FEyJW4JRYVk1kXKmypS2HZJTIT5TbmlFhJKeVKyUWgmU7JrKLaKSeydSgsqeylZOAtUzaOVSaLKVk4aqW1cRx2oxDCqLD5YadkdICGvjaQ5/ZxufgsjKp5VLKiBhtk9lPKpBqtJYeVPlRAxSypSWDlT5UbInyq0WDkSyo4alkSiwcqWVGyJZEosHKmLFYyJixKLAypZUbIlkSi1ctSyo+RNkSiwcqjlR8pTZVCwcqbKjZUxb0SlsHKmtZGyqJalLYVkkXIOqSUGyp7KYap5FEsPKpBqm1qnl4qxCWGG6Jw0orWKYZxWqSwQxSyIwjupBitIAGKWRHEamI1aLVxGnEasiNTEeiu0tUEalu1aEWilutFdqWp7vRLdq5uj0TbrRNpamY0smiubrRNuwpSqe7TGNXTGFExp",
+      "description": "Pinkerton — второй студийный альбом американской рок-группы Weezer, выпущенный 24 сентября 1996 года на лейбле DGC Records. Отказавшись от планов по созданию рок-оперы Songs from the Black Hole, колле",
       "id": 1
     }
   ],
   "users": [
     {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 1
+      "username": "daniel",
+      "age": "15",
+      "password": "123qwe",
+      "id": 11
     },
     {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 2
+      "username": "daniela",
+      "age": "15",
+      "password": "123qwe",
+      "id": 12
     },
     {
-      "username": "максат",
-      "age": "23",
-      "password": "1234567",
-      "id": 3
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 4
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 5
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 6
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 7
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 8
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 9
-    },
-    {
-      "username": "admin@gmail.com",
-      "age": "",
-      "password": "chocolate",
-      "admin": true,
-      "id": 10
-    }]
+      "username": "dastan",
+      "age": "12",
+      "password": "qweqwe",
+      "id": 13
+    }
+  ]
 }
