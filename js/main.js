@@ -4,6 +4,13 @@ const updateForm = document.querySelector("#edit-movie-form");
 const edit_title = document.querySelector("#edit_title");
 const edit_image = document.querySelector("#edit_image");
 const edit_description = document.querySelector("#edit_description");
+const edit_plot=document.querySelector("#edit_plot")
+const edit_genre=document.querySelector("#edit_genre")
+const edit_actors=document.querySelector("#edit_actors")
+const edit_directors=document.querySelector("#edit_directors")
+const edit_year=document.querySelector("#edit_year")
+const edit_country = document.querySelector("#edit_country")
+const edit_rating=document.querySelector("#edit_rating")
 const edit_modal = document.querySelector("#edit-movie-modal");
 const edit_form = document.querySelector("#edit-movie-form");
 let moovieId = 0;
@@ -181,7 +188,6 @@ logout_btn.addEventListener("click", logout_function);
 // *FUNCTIONS
 async function login_function(e) {
   e.stopPropagation()
-  console.log("WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOORKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
   let all_users = await get_all_users_or_moovies("users");
   let a = all_users.filter(
     (item) =>
@@ -297,7 +303,7 @@ async function render() {
   movies.forEach((item) => {
     console.log(check_admin_or_not())
     movieList.innerHTML += `
-        <div class="movie-list film_img">
+        <div class="movie-list film_img item">
               <img class = 'card' id="${item.id}"
 
                 src= ${item.image}
@@ -339,7 +345,13 @@ async function editMovie(e) {
     title: edit_title.value,
     image: edit_image.value,
     description: edit_description.value,
-
+    plot: edit_plot.value,
+    genre: edit_genre.value.split(", "),
+    country: edit_country.value,
+    actors: edit_actors.value.split(", "),
+    directors:edit_directors.value.split(", "),
+    year: edit_year.value.split(", "),
+    rating:edit_rating
   };
   const id = moovieId;
   await fetch(`${MOOVIE_API}/${id}/`, {
@@ -347,10 +359,8 @@ async function editMovie(e) {
     body: JSON.stringify(updatedObj),
     headers: {
       "Content-Type": "application/json;charset=utf-8",
-
     },
   });
-
   render();
   edit_modal.style.display = "none";
 }
